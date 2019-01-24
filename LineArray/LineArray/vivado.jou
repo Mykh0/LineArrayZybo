@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Jan 24 17:26:53 2019
+# Process ID: 6324
+# Current directory: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16496 C:\Users\Mykho\Documents\repos\LineArrayZybo\LineArray\LineArray\LineArray.xpr
+# Log file: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/vivado.log
+# Journal file: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.xpr
+open_bd_design {C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd}

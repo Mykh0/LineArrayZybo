@@ -1,0 +1,136 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port debug4 -pg 1 -y 1960 -defaultsOSRD
+preplace port PWM_OUT -pg 1 -y 460 -defaultsOSRD
+preplace port DDR -pg 1 -y 1840 -defaultsOSRD
+preplace port debug5 -pg 1 -y 1980 -defaultsOSRD
+preplace port PWM_OUT_1 -pg 1 -y 620 -defaultsOSRD
+preplace port PWM_OUT_2 -pg 1 -y 780 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 690 -defaultsOSRD
+preplace port debugPin -pg 1 -y 1900 -defaultsOSRD
+preplace port PWM_OUT_3 -pg 1 -y 940 -defaultsOSRD
+preplace port validCheck -pg 1 -y 310 -defaultsOSRD
+preplace port PWM_OUT_4 -pg 1 -y 1100 -defaultsOSRD
+preplace port PWM_OUT_5 -pg 1 -y 1260 -defaultsOSRD
+preplace port PWM_OUT_6 -pg 1 -y 1420 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 1860 -defaultsOSRD
+preplace port PWM_OUT_7 -pg 1 -y 1580 -defaultsOSRD
+preplace port PWM_OUT_8 -pg 1 -y 1740 -defaultsOSRD
+preplace port Vaux14 -pg 1 -y 960 -defaultsOSRD
+preplace port debug2 -pg 1 -y 1920 -defaultsOSRD
+preplace port debug3 -pg 1 -y 1940 -defaultsOSRD
+preplace inst PWM_GENERATOR_6 -pg 1 -lvl 8 -y 1420 -defaultsOSRD
+preplace inst PWM_GENERATOR_7 -pg 1 -lvl 8 -y 1580 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 7 -y 440 -defaultsOSRD
+preplace inst all_pass_filter_0 -pg 1 -lvl 5 -y 840 -defaultsOSRD
+preplace inst PWM_GENERATOR_8 -pg 1 -lvl 8 -y 1740 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 7 -y 600 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 720 -defaultsOSRD
+preplace inst fir_compiler_2 -pg 1 -lvl 7 -y 760 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 4 -y 960 -defaultsOSRD
+preplace inst fir_compiler_3 -pg 1 -lvl 7 -y 920 -defaultsOSRD
+preplace inst fir_compiler_4 -pg 1 -lvl 7 -y 1070 -defaultsOSRD
+preplace inst fir_compiler_5 -pg 1 -lvl 7 -y 1230 -defaultsOSRD
+preplace inst PWM_GENERATOR_0 -pg 1 -lvl 8 -y 420 -defaultsOSRD
+preplace inst fir_compiler_6 -pg 1 -lvl 7 -y 1400 -defaultsOSRD
+preplace inst PWM_GENERATOR_1 -pg 1 -lvl 8 -y 580 -defaultsOSRD
+preplace inst fir_compiler_7 -pg 1 -lvl 7 -y 1560 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -y 1440 -defaultsOSRD
+preplace inst PWM_GENERATOR_2 -pg 1 -lvl 8 -y 740 -defaultsOSRD
+preplace inst fir_compiler_8 -pg 1 -lvl 7 -y 1720 -defaultsOSRD
+preplace inst PWM_GENERATOR_3 -pg 1 -lvl 8 -y 900 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 690 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -y 1220 -defaultsOSRD
+preplace inst PWM_GENERATOR_4 -pg 1 -lvl 8 -y 1060 -defaultsOSRD
+preplace inst SystemReset_0 -pg 1 -lvl 3 -y 810 -defaultsOSRD
+preplace inst translatorV2_0 -pg 1 -lvl 5 -y 1120 -defaultsOSRD
+preplace inst DelayUnit_0 -pg 1 -lvl 6 -y 980 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 1320 -defaultsOSRD
+preplace inst PWM_GENERATOR_5 -pg 1 -lvl 8 -y 1240 -defaultsOSRD
+preplace netloc translatorV2_0_S00_CONFIG_DATA1 1 5 1 1690
+preplace netloc fir_compiler_2_m_axis_data_tvalid 1 7 1 2640
+preplace netloc translatorV2_0_S00_CONFIG_DATA2 1 5 1 1700
+preplace netloc fir_compiler_1_m_axis_data_tdata 1 7 1 2630
+preplace netloc PWM_GENERATOR_0_PWM_OUT 1 8 1 2990J
+preplace netloc PWM_GENERATOR_4_PWM_OUT 1 8 1 2990J
+preplace netloc DelayUnit_0_config_ready 1 4 5 1310 1920 NJ 1920 2130 1920 NJ 1920 NJ
+preplace netloc translatorV2_0_S00_CONFIG_DATA3 1 5 1 1710
+preplace netloc Axi_translator_0_CONFIG_ENABLE 1 5 4 1720 1900 NJ 1900 NJ 1900 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 3 6 880J 1860 NJ 1860 NJ 1860 NJ 1860 NJ 1860 NJ
+preplace netloc translatorV2_0_S00_CONFIG_DATA4 1 5 1 1730
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 3 2 940 1130 1270
+preplace netloc fir_compiler_0_m_axis_data_tdata 1 7 1 2630
+preplace netloc translatorV2_0_S00_CONFIG_DATA5 1 5 1 1740
+preplace netloc translatorV2_0_S00_CONFIG_DATA6 1 5 1 1750
+preplace netloc fir_compiler_3_m_axis_data_tdata 1 7 1 2630
+preplace netloc fir_compiler_6_m_axis_data_tvalid 1 7 1 N
+preplace netloc translatorV2_0_S00_CONFIG_DATA7 1 5 1 1760
+preplace netloc xadc_wiz_0_m_axis_tid 1 4 1 1260
+preplace netloc DelayUnit_0_m5_axis_tvalid 1 6 1 2210
+preplace netloc PWM_GENERATOR_7_PWM_OUT 1 8 1 NJ
+preplace netloc DelayUnit_0_m7_axis_tvalid 1 6 1 2160
+preplace netloc DelayUnit_0_m1_axis_tdata 1 6 1 2160
+preplace netloc DelayUnit_0_m6_axis_tdata 1 6 1 2200
+preplace netloc processing_system7_0_DDR 1 3 6 900J 1840 NJ 1840 NJ 1840 NJ 1840 NJ 1840 NJ
+preplace netloc fir_compiler_7_m_axis_data_tdata 1 7 1 N
+preplace netloc fir_compiler_5_m_axis_data_tvalid 1 7 1 2680
+preplace netloc fir_compiler_5_m_axis_data_tdata 1 7 1 2680
+preplace netloc DelayUnit_0_m5_axis_tdata 1 6 1 2220
+preplace netloc PWM_GENERATOR_2_PWM_OUT 1 8 1 2990J
+preplace netloc fir_compiler_7_m_axis_data_tvalid 1 7 1 N
+preplace netloc fir_compiler_2_m_axis_data_tdata 1 7 1 2630
+preplace netloc fir_compiler_1_m_axis_data_tvalid 1 7 1 2640
+preplace netloc ps7_0_axi_periph_M00_AXI 1 4 1 1280
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 920
+preplace netloc DelayUnit_0_s_axis_tready 1 5 1 1670
+preplace netloc DelayUnit_0_m1_axis_tvalid 1 6 1 2220
+preplace netloc fir_compiler_3_m_axis_data_tvalid 1 7 1 2640
+preplace netloc PWM_GENERATOR_8_PWM_OUT 1 8 1 NJ
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 3 2 930 1100 1260
+preplace netloc all_pass_filter_0_m_axis_tdata 1 5 1 1720
+preplace netloc PWM_GENERATOR_3_PWM_OUT 1 8 1 2990J
+preplace netloc xadc_wiz_0_m_axis_tvalid 1 4 1 1290
+preplace netloc fir_compiler_4_m_axis_data_tdata 1 7 1 2670
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 7 450 1960 910 1960 1290 1960 NJ 1960 NJ 1960 NJ 1960 N
+preplace netloc fir_compiler_6_m_axis_data_tdata 1 7 1 N
+preplace netloc DelayUnit_0_m8_axis_tdata 1 6 1 2150
+preplace netloc DelayUnit_0_m8_axis_tvalid 1 6 1 2140
+preplace netloc fir_compiler_0_m_axis_data_tvalid 1 7 1 2640
+preplace netloc fir_compiler_8_m_axis_data_tdata 1 7 1 N
+preplace netloc DelayUnit_0_m3_axis_tvalid 1 6 1 N
+preplace netloc all_pass_filter_0_m_axis_tvalid 1 5 1 1690
+preplace netloc DelayUnit_0_m2_axis_tvalid 1 6 1 2240
+preplace netloc DelayUnit_0_m4_axis_tvalid 1 6 1 2230
+preplace netloc clk_wiz_0_locked 1 2 1 450
+preplace netloc translatorV2_0_S00_CONFIG_VALID 1 5 4 1770 1940 NJ 1940 NJ 1940 NJ
+preplace netloc PWM_GENERATOR_1_PWM_OUT 1 8 1 2990J
+preplace netloc xadc_wiz_0_m_axis_tdata 1 4 1 1270
+preplace netloc DelayUnit_0_m3_axis_tdata 1 6 1 N
+preplace netloc SystemReset_0_nrst 1 3 5 940J 520 1280J 520 1680J 520 NJ 520 2660
+preplace netloc Vaux14_1 1 0 4 NJ 960 NJ 960 NJ 960 NJ
+preplace netloc DelayUnit_0_m0_axis_tvalid 1 6 3 2140J 310 NJ 310 NJ
+preplace netloc DelayUnit_0_m0_axis_tdata 1 6 1 2150
+preplace netloc clk_wiz_0_clk_out1 1 2 6 460 470 930 470 1310 470 1700 470 2190 680 2650
+preplace netloc translatorV2_0_S00_CONFIG_CHANNEL 1 5 1 1670
+preplace netloc PWM_GENERATOR_5_PWM_OUT 1 8 1 2990J
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 1 890J
+preplace netloc DelayUnit_0_m6_axis_tvalid 1 6 1 2180
+preplace netloc DelayUnit_0_m4_axis_tdata 1 6 1 2240
+preplace netloc xlconstant_0_dout 1 3 1 880
+preplace netloc PWM_GENERATOR_6_PWM_OUT 1 8 1 NJ
+preplace netloc DelayUnit_0_m2_axis_tdata 1 6 1 2230
+preplace netloc clk_in1_1 1 0 2 NJ 690 N
+preplace netloc all_pass_filter_0_s_axis_tready 1 4 1 1300
+preplace netloc fir_compiler_4_m_axis_data_tvalid 1 7 1 2680
+preplace netloc translatorV2_0_S00_CONFIG_DATA0 1 5 1 1680
+preplace netloc DelayUnit_0_m7_axis_tdata 1 6 1 2170
+preplace netloc fir_compiler_8_m_axis_data_tvalid 1 7 1 N
+levelinfo -pg 1 -70 80 370 690 1100 1490 1950 2440 2840 3020 -top -360 -bot 2560
+",
+}
+{
+   da_axi4_cnt: "3",
+   da_board_cnt: "1",
+   da_ps7_cnt: "1",
+}
