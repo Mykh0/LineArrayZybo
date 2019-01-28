@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# DelayUnit, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, SystemReset, all_pass_filter
+# DelayUnit, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, PWM_GENERATOR, SpeakerGain_v1_0, SystemReset, all_pass_filter, translatorV2_v1_0
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -179,12 +179,6 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
 CONFIG.FREQ_HZ {125000000} \
  ] $clk_in1
-  set debug2 [ create_bd_port -dir O debug2 ]
-  set debug3 [ create_bd_port -dir O debug3 ]
-  set debug4 [ create_bd_port -dir O debug4 ]
-  set debug5 [ create_bd_port -dir O debug5 ]
-  set debugPin [ create_bd_port -dir O debugPin ]
-  set validCheck [ create_bd_port -dir O -type data validCheck ]
 
   # Create instance: DelayUnit_0, and set properties
   set block_name DelayUnit
@@ -296,6 +290,22 @@ CONFIG.FREQ_HZ {125000000} \
      return 1
    }
   
+  # Create instance: SpeakerGain_v1_0_0, and set properties
+  set block_name SpeakerGain_v1_0
+  set block_cell_name SpeakerGain_v1_0_0
+  if { [catch {set SpeakerGain_v1_0_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $SpeakerGain_v1_0_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  set_property -dict [ list \
+CONFIG.NUM_READ_OUTSTANDING {1} \
+CONFIG.NUM_WRITE_OUTSTANDING {1} \
+ ] [get_bd_intf_pins /SpeakerGain_v1_0_0/s00_axi]
+
   # Create instance: SystemReset_0, and set properties
   set block_name SystemReset
   set block_cell_name SystemReset_0
@@ -1698,15 +1708,23 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-CONFIG.NUM_MI {1} \
+CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
-  # Create instance: translatorV2_0, and set properties
-  set translatorV2_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:translatorV2:1.0 translatorV2_0 ]
-
+  # Create instance: translatorV2_v1_0_0, and set properties
+  set block_name translatorV2_v1_0
+  set block_cell_name translatorV2_v1_0_0
+  if { [catch {set translatorV2_v1_0_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $translatorV2_v1_0_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: xadc_wiz_0, and set properties
   set xadc_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0 ]
   set_property -dict [ list \
@@ -1750,13 +1768,13 @@ CONFIG.VCCDDRO_ALARM_LOWER.VALUE_SRC {DEFAULT} \
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins translatorV2_0/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins translatorV2_v1_0_0/s00_axi]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins SpeakerGain_v1_0_0/s00_axi] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net Axi_translator_0_CONFIG_ENABLE [get_bd_ports debugPin] [get_bd_pins DelayUnit_0/config_enable] [get_bd_pins translatorV2_0/S00_CONFIG_ENABLE]
-  connect_bd_net -net DelayUnit_0_config_ready [get_bd_ports debug2] [get_bd_pins DelayUnit_0/config_ready] [get_bd_pins translatorV2_0/S00_CONFIG_READY]
+  connect_bd_net -net DelayUnit_0_config_ready [get_bd_pins DelayUnit_0/config_ready] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_READY]
   connect_bd_net -net DelayUnit_0_m0_axis_tdata [get_bd_pins DelayUnit_0/m0_axis_tdata] [get_bd_pins fir_compiler_0/s_axis_data_tdata]
-  connect_bd_net -net DelayUnit_0_m0_axis_tvalid [get_bd_ports validCheck] [get_bd_pins DelayUnit_0/m0_axis_tvalid] [get_bd_pins fir_compiler_0/s_axis_data_tvalid]
+  connect_bd_net -net DelayUnit_0_m0_axis_tvalid [get_bd_pins DelayUnit_0/m0_axis_tvalid] [get_bd_pins fir_compiler_0/s_axis_data_tvalid]
   connect_bd_net -net DelayUnit_0_m1_axis_tdata [get_bd_pins DelayUnit_0/m1_axis_tdata] [get_bd_pins fir_compiler_1/s_axis_data_tdata]
   connect_bd_net -net DelayUnit_0_m1_axis_tvalid [get_bd_pins DelayUnit_0/m1_axis_tvalid] [get_bd_pins fir_compiler_1/s_axis_data_tvalid]
   connect_bd_net -net DelayUnit_0_m2_axis_tdata [get_bd_pins DelayUnit_0/m2_axis_tdata] [get_bd_pins fir_compiler_2/s_axis_data_tdata]
@@ -1783,183 +1801,217 @@ CONFIG.VCCDDRO_ALARM_LOWER.VALUE_SRC {DEFAULT} \
   connect_bd_net -net PWM_GENERATOR_6_PWM_OUT [get_bd_ports PWM_OUT_6] [get_bd_pins PWM_GENERATOR_6/PWM_OUT]
   connect_bd_net -net PWM_GENERATOR_7_PWM_OUT [get_bd_ports PWM_OUT_7] [get_bd_pins PWM_GENERATOR_7/PWM_OUT]
   connect_bd_net -net PWM_GENERATOR_8_PWM_OUT [get_bd_ports PWM_OUT_8] [get_bd_pins PWM_GENERATOR_8/PWM_OUT]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata0 [get_bd_pins PWM_GENERATOR_0/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata0]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata1 [get_bd_pins PWM_GENERATOR_1/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata1]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata2 [get_bd_pins PWM_GENERATOR_2/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata2]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata3 [get_bd_pins PWM_GENERATOR_3/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata3]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata4 [get_bd_pins PWM_GENERATOR_4/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata4]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata5 [get_bd_pins PWM_GENERATOR_5/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata5]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata6 [get_bd_pins PWM_GENERATOR_6/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata6]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata7 [get_bd_pins PWM_GENERATOR_7/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata7]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tdata8 [get_bd_pins PWM_GENERATOR_8/S_AXIS_TDATA] [get_bd_pins SpeakerGain_v1_0_0/m_tdata8]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid0 [get_bd_pins PWM_GENERATOR_0/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid0]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid1 [get_bd_pins PWM_GENERATOR_1/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid1]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid2 [get_bd_pins PWM_GENERATOR_2/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid2]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid3 [get_bd_pins PWM_GENERATOR_3/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid3]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid4 [get_bd_pins PWM_GENERATOR_4/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid4]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid5 [get_bd_pins PWM_GENERATOR_5/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid5]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid6 [get_bd_pins PWM_GENERATOR_6/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid6]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid7 [get_bd_pins PWM_GENERATOR_7/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid7]
+  connect_bd_net -net SpeakerGain_v1_0_0_m_tvalid8 [get_bd_pins PWM_GENERATOR_8/S_AXIS_TVALID] [get_bd_pins SpeakerGain_v1_0_0/m_tvalid8]
   connect_bd_net -net SystemReset_0_nrst [get_bd_pins DelayUnit_0/nrst] [get_bd_pins PWM_GENERATOR_0/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_1/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_2/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_3/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_4/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_5/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_6/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_7/S_AXIS_ARESTN] [get_bd_pins PWM_GENERATOR_8/S_AXIS_ARESTN] [get_bd_pins SystemReset_0/nrst] [get_bd_pins all_pass_filter_0/nrst] [get_bd_pins xadc_wiz_0/m_axis_resetn]
   connect_bd_net -net all_pass_filter_0_m_axis_tdata [get_bd_pins DelayUnit_0/s_axis_tdata] [get_bd_pins all_pass_filter_0/m_axis_tdata]
   connect_bd_net -net all_pass_filter_0_m_axis_tvalid [get_bd_pins DelayUnit_0/s_axis_tvalid] [get_bd_pins all_pass_filter_0/m_axis_tvalid]
   connect_bd_net -net all_pass_filter_0_s_axis_tready [get_bd_pins all_pass_filter_0/s_axis_tready] [get_bd_pins xadc_wiz_0/m_axis_tready]
   connect_bd_net -net clk_in1_1 [get_bd_ports clk_in1] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins DelayUnit_0/clk] [get_bd_pins PWM_GENERATOR_0/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_1/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_2/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_3/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_4/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_5/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_6/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_7/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_8/S_AXIS_ACLK] [get_bd_pins SystemReset_0/clk] [get_bd_pins all_pass_filter_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins fir_compiler_4/aclk] [get_bd_pins fir_compiler_5/aclk] [get_bd_pins fir_compiler_6/aclk] [get_bd_pins fir_compiler_7/aclk] [get_bd_pins fir_compiler_8/aclk] [get_bd_pins xadc_wiz_0/m_axis_aclk] [get_bd_pins xadc_wiz_0/s_axis_aclk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins DelayUnit_0/clk] [get_bd_pins PWM_GENERATOR_0/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_1/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_2/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_3/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_4/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_5/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_6/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_7/S_AXIS_ACLK] [get_bd_pins PWM_GENERATOR_8/S_AXIS_ACLK] [get_bd_pins SpeakerGain_v1_0_0/clk] [get_bd_pins SystemReset_0/clk] [get_bd_pins all_pass_filter_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins fir_compiler_0/aclk] [get_bd_pins fir_compiler_1/aclk] [get_bd_pins fir_compiler_2/aclk] [get_bd_pins fir_compiler_3/aclk] [get_bd_pins fir_compiler_4/aclk] [get_bd_pins fir_compiler_5/aclk] [get_bd_pins fir_compiler_6/aclk] [get_bd_pins fir_compiler_7/aclk] [get_bd_pins fir_compiler_8/aclk] [get_bd_pins xadc_wiz_0/m_axis_aclk] [get_bd_pins xadc_wiz_0/s_axis_aclk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins SystemReset_0/PllLocked] [get_bd_pins clk_wiz_0/locked]
-  connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_0/S_AXIS_TDATA] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_0_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_0/S_AXIS_TVALID] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_1/S_AXIS_TDATA] [get_bd_pins fir_compiler_1/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_1_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_1/S_AXIS_TVALID] [get_bd_pins fir_compiler_1/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_2_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_2/S_AXIS_TDATA] [get_bd_pins fir_compiler_2/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_2_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_2/S_AXIS_TVALID] [get_bd_pins fir_compiler_2/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_3_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_3/S_AXIS_TDATA] [get_bd_pins fir_compiler_3/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_3_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_3/S_AXIS_TVALID] [get_bd_pins fir_compiler_3/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_4_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_4/S_AXIS_TDATA] [get_bd_pins fir_compiler_4/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_4_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_4/S_AXIS_TVALID] [get_bd_pins fir_compiler_4/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_5_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_5/S_AXIS_TDATA] [get_bd_pins fir_compiler_5/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_5_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_5/S_AXIS_TVALID] [get_bd_pins fir_compiler_5/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_6_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_6/S_AXIS_TDATA] [get_bd_pins fir_compiler_6/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_6_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_6/S_AXIS_TVALID] [get_bd_pins fir_compiler_6/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_7_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_7/S_AXIS_TDATA] [get_bd_pins fir_compiler_7/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_7_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_7/S_AXIS_TVALID] [get_bd_pins fir_compiler_7/m_axis_data_tvalid]
-  connect_bd_net -net fir_compiler_8_m_axis_data_tdata [get_bd_pins PWM_GENERATOR_8/S_AXIS_TDATA] [get_bd_pins fir_compiler_8/m_axis_data_tdata]
-  connect_bd_net -net fir_compiler_8_m_axis_data_tvalid [get_bd_pins PWM_GENERATOR_8/S_AXIS_TVALID] [get_bd_pins fir_compiler_8/m_axis_data_tvalid]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports debug4] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins translatorV2_0/s00_axi_aclk]
+  connect_bd_net -net fir_compiler_0_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata0] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_0_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid0] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_1_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata1] [get_bd_pins fir_compiler_1/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_1_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid1] [get_bd_pins fir_compiler_1/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_2_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata2] [get_bd_pins fir_compiler_2/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_2_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid2] [get_bd_pins fir_compiler_2/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_3_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata3] [get_bd_pins fir_compiler_3/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_3_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid3] [get_bd_pins fir_compiler_3/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_4_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata4] [get_bd_pins fir_compiler_4/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_4_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid4] [get_bd_pins fir_compiler_4/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_5_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata5] [get_bd_pins fir_compiler_5/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_5_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid5] [get_bd_pins fir_compiler_5/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_6_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata6] [get_bd_pins fir_compiler_6/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_6_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid6] [get_bd_pins fir_compiler_6/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_7_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata7] [get_bd_pins fir_compiler_7/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_7_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid7] [get_bd_pins fir_compiler_7/m_axis_data_tvalid]
+  connect_bd_net -net fir_compiler_8_m_axis_data_tdata [get_bd_pins SpeakerGain_v1_0_0/s_tdata8] [get_bd_pins fir_compiler_8/m_axis_data_tdata]
+  connect_bd_net -net fir_compiler_8_m_axis_data_tvalid [get_bd_pins SpeakerGain_v1_0_0/s_tvalid8] [get_bd_pins fir_compiler_8/m_axis_data_tvalid]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins SpeakerGain_v1_0_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins translatorV2_v1_0_0/s00_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins translatorV2_0/s00_axi_aresetn]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_CHANNEL [get_bd_pins DelayUnit_0/config_channel] [get_bd_pins translatorV2_0/S00_CONFIG_CHANNEL]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA0 [get_bd_pins DelayUnit_0/config_data0] [get_bd_pins translatorV2_0/S00_CONFIG_DATA0]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA1 [get_bd_pins DelayUnit_0/config_data1] [get_bd_pins translatorV2_0/S00_CONFIG_DATA1]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA2 [get_bd_pins DelayUnit_0/config_data2] [get_bd_pins translatorV2_0/S00_CONFIG_DATA2]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA3 [get_bd_pins DelayUnit_0/config_data3] [get_bd_pins translatorV2_0/S00_CONFIG_DATA3]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA4 [get_bd_pins DelayUnit_0/config_data4] [get_bd_pins translatorV2_0/S00_CONFIG_DATA4]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA5 [get_bd_pins DelayUnit_0/config_data5] [get_bd_pins translatorV2_0/S00_CONFIG_DATA5]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA6 [get_bd_pins DelayUnit_0/config_data6] [get_bd_pins translatorV2_0/S00_CONFIG_DATA6]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_DATA7 [get_bd_pins DelayUnit_0/config_data7] [get_bd_pins translatorV2_0/S00_CONFIG_DATA7]
-  connect_bd_net -net translatorV2_0_S00_CONFIG_VALID [get_bd_ports debug3] [get_bd_pins DelayUnit_0/config_valid] [get_bd_pins translatorV2_0/S00_CONFIG_VALID]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins SpeakerGain_v1_0_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins translatorV2_v1_0_0/s00_axi_aresetn]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_CHANNEL [get_bd_pins DelayUnit_0/config_channel] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_CHANNEL]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA0 [get_bd_pins DelayUnit_0/config_data0] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA0]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA1 [get_bd_pins DelayUnit_0/config_data1] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA1]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA2 [get_bd_pins DelayUnit_0/config_data2] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA2]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA3 [get_bd_pins DelayUnit_0/config_data3] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA3]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA4 [get_bd_pins DelayUnit_0/config_data4] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA4]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA5 [get_bd_pins DelayUnit_0/config_data5] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA5]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA6 [get_bd_pins DelayUnit_0/config_data6] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA6]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_DATA7 [get_bd_pins DelayUnit_0/config_data7] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA7]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_ENABLE [get_bd_pins DelayUnit_0/config_enable] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_ENABLE]
+  connect_bd_net -net translatorV2_v1_0_0_S00_CONFIG_VALID [get_bd_pins DelayUnit_0/config_valid] [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_VALID]
   connect_bd_net -net xadc_wiz_0_m_axis_tdata [get_bd_pins all_pass_filter_0/s_axis_tdata] [get_bd_pins xadc_wiz_0/m_axis_tdata]
   connect_bd_net -net xadc_wiz_0_m_axis_tid [get_bd_pins all_pass_filter_0/s_axis_tid] [get_bd_pins xadc_wiz_0/m_axis_tid]
   connect_bd_net -net xadc_wiz_0_m_axis_tvalid [get_bd_pins all_pass_filter_0/s_axis_tvalid] [get_bd_pins xadc_wiz_0/m_axis_tvalid]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins xadc_wiz_0/vn_in] [get_bd_pins xadc_wiz_0/vp_in] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x54300000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs translatorV2_0/S00_AXI/S00_AXI_reg] SEG_translatorV2_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x64300000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs SpeakerGain_v1_0_0/s00_axi/reg0] SEG_SpeakerGain_v1_0_0_reg0
+  create_bd_addr_seg -range 0x00010000 -offset 0x54300000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs translatorV2_v1_0_0/s00_axi/reg0] SEG_translatorV2_v1_0_0_reg0
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port debug4 -pg 1 -y 1960 -defaultsOSRD
-preplace port PWM_OUT -pg 1 -y 460 -defaultsOSRD
-preplace port DDR -pg 1 -y 1840 -defaultsOSRD
-preplace port debug5 -pg 1 -y 1980 -defaultsOSRD
-preplace port PWM_OUT_1 -pg 1 -y 620 -defaultsOSRD
-preplace port PWM_OUT_2 -pg 1 -y 780 -defaultsOSRD
-preplace port clk_in1 -pg 1 -y 690 -defaultsOSRD
-preplace port debugPin -pg 1 -y 1900 -defaultsOSRD
-preplace port PWM_OUT_3 -pg 1 -y 940 -defaultsOSRD
-preplace port validCheck -pg 1 -y 310 -defaultsOSRD
-preplace port PWM_OUT_4 -pg 1 -y 1100 -defaultsOSRD
-preplace port PWM_OUT_5 -pg 1 -y 1260 -defaultsOSRD
-preplace port PWM_OUT_6 -pg 1 -y 1420 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 1860 -defaultsOSRD
-preplace port PWM_OUT_7 -pg 1 -y 1580 -defaultsOSRD
-preplace port PWM_OUT_8 -pg 1 -y 1740 -defaultsOSRD
-preplace port Vaux14 -pg 1 -y 960 -defaultsOSRD
-preplace port debug2 -pg 1 -y 1920 -defaultsOSRD
-preplace port debug3 -pg 1 -y 1940 -defaultsOSRD
-preplace inst PWM_GENERATOR_6 -pg 1 -lvl 8 -y 1420 -defaultsOSRD
-preplace inst PWM_GENERATOR_7 -pg 1 -lvl 8 -y 1580 -defaultsOSRD
-preplace inst fir_compiler_0 -pg 1 -lvl 7 -y 440 -defaultsOSRD
-preplace inst all_pass_filter_0 -pg 1 -lvl 5 -y 840 -defaultsOSRD
-preplace inst PWM_GENERATOR_8 -pg 1 -lvl 8 -y 1740 -defaultsOSRD
-preplace inst fir_compiler_1 -pg 1 -lvl 7 -y 600 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 720 -defaultsOSRD
-preplace inst fir_compiler_2 -pg 1 -lvl 7 -y 760 -defaultsOSRD
-preplace inst xadc_wiz_0 -pg 1 -lvl 4 -y 960 -defaultsOSRD
-preplace inst fir_compiler_3 -pg 1 -lvl 7 -y 920 -defaultsOSRD
-preplace inst fir_compiler_4 -pg 1 -lvl 7 -y 1070 -defaultsOSRD
-preplace inst fir_compiler_5 -pg 1 -lvl 7 -y 1230 -defaultsOSRD
-preplace inst PWM_GENERATOR_0 -pg 1 -lvl 8 -y 420 -defaultsOSRD
-preplace inst fir_compiler_6 -pg 1 -lvl 7 -y 1400 -defaultsOSRD
-preplace inst PWM_GENERATOR_1 -pg 1 -lvl 8 -y 580 -defaultsOSRD
-preplace inst fir_compiler_7 -pg 1 -lvl 7 -y 1560 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -y 1440 -defaultsOSRD
-preplace inst PWM_GENERATOR_2 -pg 1 -lvl 8 -y 740 -defaultsOSRD
-preplace inst fir_compiler_8 -pg 1 -lvl 7 -y 1720 -defaultsOSRD
-preplace inst PWM_GENERATOR_3 -pg 1 -lvl 8 -y 900 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 690 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 4 -y 1220 -defaultsOSRD
-preplace inst PWM_GENERATOR_4 -pg 1 -lvl 8 -y 1060 -defaultsOSRD
-preplace inst SystemReset_0 -pg 1 -lvl 3 -y 810 -defaultsOSRD
-preplace inst translatorV2_0 -pg 1 -lvl 5 -y 1120 -defaultsOSRD
-preplace inst DelayUnit_0 -pg 1 -lvl 6 -y 980 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -y 1320 -defaultsOSRD
-preplace inst PWM_GENERATOR_5 -pg 1 -lvl 8 -y 1240 -defaultsOSRD
-preplace netloc translatorV2_0_S00_CONFIG_DATA1 1 5 1 1690
-preplace netloc fir_compiler_2_m_axis_data_tvalid 1 7 1 2640
-preplace netloc translatorV2_0_S00_CONFIG_DATA2 1 5 1 1700
-preplace netloc fir_compiler_1_m_axis_data_tdata 1 7 1 2630
-preplace netloc PWM_GENERATOR_0_PWM_OUT 1 8 1 2990J
-preplace netloc PWM_GENERATOR_4_PWM_OUT 1 8 1 2990J
-preplace netloc DelayUnit_0_config_ready 1 4 5 1310 1920 NJ 1920 2130 1920 NJ 1920 NJ
-preplace netloc translatorV2_0_S00_CONFIG_DATA3 1 5 1 1710
-preplace netloc Axi_translator_0_CONFIG_ENABLE 1 5 4 1720 1900 NJ 1900 NJ 1900 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 3 6 880J 1860 NJ 1860 NJ 1860 NJ 1860 NJ 1860 NJ
-preplace netloc translatorV2_0_S00_CONFIG_DATA4 1 5 1 1730
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 3 2 940 1130 1270
-preplace netloc fir_compiler_0_m_axis_data_tdata 1 7 1 2630
-preplace netloc translatorV2_0_S00_CONFIG_DATA5 1 5 1 1740
-preplace netloc translatorV2_0_S00_CONFIG_DATA6 1 5 1 1750
-preplace netloc fir_compiler_3_m_axis_data_tdata 1 7 1 2630
-preplace netloc fir_compiler_6_m_axis_data_tvalid 1 7 1 N
-preplace netloc translatorV2_0_S00_CONFIG_DATA7 1 5 1 1760
-preplace netloc xadc_wiz_0_m_axis_tid 1 4 1 1260
-preplace netloc DelayUnit_0_m5_axis_tvalid 1 6 1 2210
-preplace netloc PWM_GENERATOR_7_PWM_OUT 1 8 1 NJ
-preplace netloc DelayUnit_0_m7_axis_tvalid 1 6 1 2160
-preplace netloc DelayUnit_0_m1_axis_tdata 1 6 1 2160
-preplace netloc DelayUnit_0_m6_axis_tdata 1 6 1 2200
-preplace netloc processing_system7_0_DDR 1 3 6 900J 1840 NJ 1840 NJ 1840 NJ 1840 NJ 1840 NJ
-preplace netloc fir_compiler_7_m_axis_data_tdata 1 7 1 N
-preplace netloc fir_compiler_5_m_axis_data_tvalid 1 7 1 2680
-preplace netloc fir_compiler_5_m_axis_data_tdata 1 7 1 2680
-preplace netloc DelayUnit_0_m5_axis_tdata 1 6 1 2220
-preplace netloc PWM_GENERATOR_2_PWM_OUT 1 8 1 2990J
-preplace netloc fir_compiler_7_m_axis_data_tvalid 1 7 1 N
-preplace netloc fir_compiler_2_m_axis_data_tdata 1 7 1 2630
-preplace netloc fir_compiler_1_m_axis_data_tvalid 1 7 1 2640
-preplace netloc ps7_0_axi_periph_M00_AXI 1 4 1 1280
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 1 920
-preplace netloc DelayUnit_0_s_axis_tready 1 5 1 1670
-preplace netloc DelayUnit_0_m1_axis_tvalid 1 6 1 2220
-preplace netloc fir_compiler_3_m_axis_data_tvalid 1 7 1 2640
-preplace netloc PWM_GENERATOR_8_PWM_OUT 1 8 1 NJ
-preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 3 2 930 1100 1260
-preplace netloc all_pass_filter_0_m_axis_tdata 1 5 1 1720
-preplace netloc PWM_GENERATOR_3_PWM_OUT 1 8 1 2990J
-preplace netloc xadc_wiz_0_m_axis_tvalid 1 4 1 1290
-preplace netloc fir_compiler_4_m_axis_data_tdata 1 7 1 2670
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 7 450 1960 910 1960 1290 1960 NJ 1960 NJ 1960 NJ 1960 N
-preplace netloc fir_compiler_6_m_axis_data_tdata 1 7 1 N
-preplace netloc DelayUnit_0_m8_axis_tdata 1 6 1 2150
-preplace netloc DelayUnit_0_m8_axis_tvalid 1 6 1 2140
-preplace netloc fir_compiler_0_m_axis_data_tvalid 1 7 1 2640
-preplace netloc fir_compiler_8_m_axis_data_tdata 1 7 1 N
-preplace netloc DelayUnit_0_m3_axis_tvalid 1 6 1 N
-preplace netloc all_pass_filter_0_m_axis_tvalid 1 5 1 1690
-preplace netloc DelayUnit_0_m2_axis_tvalid 1 6 1 2240
-preplace netloc DelayUnit_0_m4_axis_tvalid 1 6 1 2230
-preplace netloc clk_wiz_0_locked 1 2 1 450
-preplace netloc translatorV2_0_S00_CONFIG_VALID 1 5 4 1770 1940 NJ 1940 NJ 1940 NJ
-preplace netloc PWM_GENERATOR_1_PWM_OUT 1 8 1 2990J
-preplace netloc xadc_wiz_0_m_axis_tdata 1 4 1 1270
-preplace netloc DelayUnit_0_m3_axis_tdata 1 6 1 N
-preplace netloc SystemReset_0_nrst 1 3 5 940J 520 1280J 520 1680J 520 NJ 520 2660
-preplace netloc Vaux14_1 1 0 4 NJ 960 NJ 960 NJ 960 NJ
-preplace netloc DelayUnit_0_m0_axis_tvalid 1 6 3 2140J 310 NJ 310 NJ
-preplace netloc DelayUnit_0_m0_axis_tdata 1 6 1 2150
-preplace netloc clk_wiz_0_clk_out1 1 2 6 460 470 930 470 1310 470 1700 470 2190 680 2650
-preplace netloc translatorV2_0_S00_CONFIG_CHANNEL 1 5 1 1670
-preplace netloc PWM_GENERATOR_5_PWM_OUT 1 8 1 2990J
-preplace netloc processing_system7_0_M_AXI_GP0 1 3 1 890J
-preplace netloc DelayUnit_0_m6_axis_tvalid 1 6 1 2180
-preplace netloc DelayUnit_0_m4_axis_tdata 1 6 1 2240
-preplace netloc xlconstant_0_dout 1 3 1 880
-preplace netloc PWM_GENERATOR_6_PWM_OUT 1 8 1 NJ
-preplace netloc DelayUnit_0_m2_axis_tdata 1 6 1 2230
-preplace netloc clk_in1_1 1 0 2 NJ 690 N
-preplace netloc all_pass_filter_0_s_axis_tready 1 4 1 1300
-preplace netloc fir_compiler_4_m_axis_data_tvalid 1 7 1 2680
-preplace netloc translatorV2_0_S00_CONFIG_DATA0 1 5 1 1680
-preplace netloc DelayUnit_0_m7_axis_tdata 1 6 1 2170
-preplace netloc fir_compiler_8_m_axis_data_tvalid 1 7 1 N
-levelinfo -pg 1 -70 80 370 690 1100 1490 1950 2440 2840 3020 -top -360 -bot 2560
+preplace port PWM_OUT -pg 1 -y 770 -defaultsOSRD
+preplace port DDR -pg 1 -y 290 -defaultsOSRD
+preplace port PWM_OUT_1 -pg 1 -y 950 -defaultsOSRD
+preplace port PWM_OUT_2 -pg 1 -y 1130 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 760 -defaultsOSRD
+preplace port PWM_OUT_3 -pg 1 -y 1310 -defaultsOSRD
+preplace port PWM_OUT_4 -pg 1 -y 1490 -defaultsOSRD
+preplace port PWM_OUT_5 -pg 1 -y 1670 -defaultsOSRD
+preplace port PWM_OUT_6 -pg 1 -y 190 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 310 -defaultsOSRD
+preplace port PWM_OUT_7 -pg 1 -y 410 -defaultsOSRD
+preplace port PWM_OUT_8 -pg 1 -y 590 -defaultsOSRD
+preplace port Vaux14 -pg 1 -y 700 -defaultsOSRD
+preplace inst PWM_GENERATOR_6 -pg 1 -lvl 9 -y 190 -defaultsOSRD
+preplace inst PWM_GENERATOR_7 -pg 1 -lvl 9 -y 410 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 7 -y 400 -defaultsOSRD
+preplace inst SpeakerGain_v1_0_0 -pg 1 -lvl 8 -y 790 -defaultsOSRD
+preplace inst all_pass_filter_0 -pg 1 -lvl 4 -y 690 -defaultsOSRD
+preplace inst PWM_GENERATOR_8 -pg 1 -lvl 9 -y 590 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 7 -y 540 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -y 650 -defaultsOSRD
+preplace inst fir_compiler_2 -pg 1 -lvl 7 -y 680 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 3 -y 700 -defaultsOSRD
+preplace inst fir_compiler_3 -pg 1 -lvl 7 -y 820 -defaultsOSRD
+preplace inst fir_compiler_4 -pg 1 -lvl 7 -y 980 -defaultsOSRD
+preplace inst fir_compiler_5 -pg 1 -lvl 7 -y 1120 -defaultsOSRD
+preplace inst PWM_GENERATOR_0 -pg 1 -lvl 9 -y 770 -defaultsOSRD
+preplace inst fir_compiler_6 -pg 1 -lvl 7 -y 1260 -defaultsOSRD
+preplace inst PWM_GENERATOR_1 -pg 1 -lvl 9 -y 950 -defaultsOSRD
+preplace inst fir_compiler_7 -pg 1 -lvl 7 -y 1400 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -y 150 -defaultsOSRD
+preplace inst PWM_GENERATOR_2 -pg 1 -lvl 9 -y 1130 -defaultsOSRD
+preplace inst fir_compiler_8 -pg 1 -lvl 7 -y 1540 -defaultsOSRD
+preplace inst translatorV2_v1_0_0 -pg 1 -lvl 5 -y 900 -defaultsOSRD
+preplace inst PWM_GENERATOR_3 -pg 1 -lvl 9 -y 1310 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 760 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 6 -y 170 -defaultsOSRD
+preplace inst PWM_GENERATOR_4 -pg 1 -lvl 9 -y 1490 -defaultsOSRD
+preplace inst SystemReset_0 -pg 1 -lvl 2 -y 780 -defaultsOSRD
+preplace inst DelayUnit_0 -pg 1 -lvl 6 -y 820 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -y 380 -defaultsOSRD
+preplace inst PWM_GENERATOR_5 -pg 1 -lvl 9 -y 1670 -defaultsOSRD
+preplace netloc fir_compiler_2_m_axis_data_tvalid 1 7 1 2420
+preplace netloc fir_compiler_1_m_axis_data_tdata 1 7 1 2470
+preplace netloc PWM_GENERATOR_0_PWM_OUT 1 9 1 NJ
+preplace netloc PWM_GENERATOR_4_PWM_OUT 1 9 1 NJ
+preplace netloc DelayUnit_0_config_ready 1 4 3 1040 1140 NJ 1140 1840
+preplace netloc processing_system7_0_FIXED_IO 1 6 4 NJ 310 NJ 310 NJ 310 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_VALID 1 5 1 N
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 4 4 1050 1150 NJ 1150 1920 900 2420J
+preplace netloc fir_compiler_0_m_axis_data_tdata 1 7 1 2510
+preplace netloc fir_compiler_6_m_axis_data_tvalid 1 7 1 2520
+preplace netloc fir_compiler_3_m_axis_data_tdata 1 7 1 2400
+preplace netloc xadc_wiz_0_m_axis_tid 1 3 1 N
+preplace netloc DelayUnit_0_m5_axis_tvalid 1 6 1 1910
+preplace netloc PWM_GENERATOR_7_PWM_OUT 1 9 1 NJ
+preplace netloc DelayUnit_0_m7_axis_tvalid 1 6 1 1870
+preplace netloc SpeakerGain_v1_0_0_m_tvalid0 1 8 1 2910
+preplace netloc DelayUnit_0_m1_axis_tdata 1 6 1 1960
+preplace netloc SpeakerGain_v1_0_0_m_tvalid1 1 8 1 2950
+preplace netloc SpeakerGain_v1_0_0_m_tdata0 1 8 1 2910
+preplace netloc SpeakerGain_v1_0_0_m_tvalid2 1 8 1 2880
+preplace netloc SpeakerGain_v1_0_0_m_tdata1 1 8 1 2890
+preplace netloc DelayUnit_0_m6_axis_tdata 1 6 1 1900
+preplace netloc processing_system7_0_DDR 1 6 4 NJ 290 NJ 290 NJ 290 NJ
+preplace netloc SpeakerGain_v1_0_0_m_tvalid3 1 8 1 2850
+preplace netloc SpeakerGain_v1_0_0_m_tdata2 1 8 1 2980
+preplace netloc fir_compiler_7_m_axis_data_tdata 1 7 1 2490
+preplace netloc SpeakerGain_v1_0_0_m_tvalid4 1 8 1 2840
+preplace netloc SpeakerGain_v1_0_0_m_tdata3 1 8 1 2960
+preplace netloc fir_compiler_5_m_axis_data_tvalid 1 7 1 2500
+preplace netloc fir_compiler_5_m_axis_data_tdata 1 7 1 2430
+preplace netloc SpeakerGain_v1_0_0_m_tvalid5 1 8 1 2830
+preplace netloc SpeakerGain_v1_0_0_m_tdata4 1 8 1 2900
+preplace netloc DelayUnit_0_m5_axis_tdata 1 6 1 1940
+preplace netloc SpeakerGain_v1_0_0_m_tdata5 1 8 1 2860
+preplace netloc SpeakerGain_v1_0_0_m_tvalid6 1 8 1 2870
+preplace netloc fir_compiler_7_m_axis_data_tvalid 1 7 1 2530
+preplace netloc PWM_GENERATOR_2_PWM_OUT 1 9 1 NJ
+preplace netloc SpeakerGain_v1_0_0_m_tvalid7 1 8 1 2940
+preplace netloc SpeakerGain_v1_0_0_m_tdata6 1 8 1 2830
+preplace netloc fir_compiler_2_m_axis_data_tdata 1 7 1 2390
+preplace netloc fir_compiler_1_m_axis_data_tvalid 1 7 1 2440
+preplace netloc ps7_0_axi_periph_M00_AXI 1 4 4 1020 10 NJ 10 NJ 10 2440
+preplace netloc SpeakerGain_v1_0_0_m_tvalid8 1 8 1 2990
+preplace netloc SpeakerGain_v1_0_0_m_tdata7 1 8 1 2880
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 5 2 1450 40 1880
+preplace netloc SpeakerGain_v1_0_0_m_tdata8 1 8 1 2920
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA0 1 5 1 N
+preplace netloc ps7_0_axi_periph_M01_AXI 1 7 1 2550
+preplace netloc DelayUnit_0_s_axis_tready 1 4 2 NJ 720 N
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA1 1 5 1 N
+preplace netloc DelayUnit_0_m1_axis_tvalid 1 6 1 1970
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA2 1 5 1 N
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA3 1 5 1 N
+preplace netloc fir_compiler_3_m_axis_data_tvalid 1 7 1 N
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA4 1 5 1 N
+preplace netloc PWM_GENERATOR_8_PWM_OUT 1 9 1 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA5 1 5 1 N
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 6 1 1890
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA6 1 5 1 N
+preplace netloc all_pass_filter_0_m_axis_tdata 1 4 2 NJ 680 N
+preplace netloc PWM_GENERATOR_3_PWM_OUT 1 9 1 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_ENABLE 1 5 1 1440
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA7 1 5 1 N
+preplace netloc fir_compiler_4_m_axis_data_tdata 1 7 1 2410
+preplace netloc xadc_wiz_0_m_axis_tvalid 1 3 1 N
+preplace netloc fir_compiler_6_m_axis_data_tdata 1 7 1 2450
+preplace netloc processing_system7_0_FCLK_CLK0 1 4 4 1030 380 1430 80 1930 320 2460
+preplace netloc DelayUnit_0_m8_axis_tdata 1 6 1 1860
+preplace netloc fir_compiler_8_m_axis_data_tdata 1 7 1 2510
+preplace netloc fir_compiler_0_m_axis_data_tvalid 1 7 1 2480
+preplace netloc DelayUnit_0_m8_axis_tvalid 1 6 1 1850
+preplace netloc DelayUnit_0_m3_axis_tvalid 1 6 1 2000
+preplace netloc all_pass_filter_0_m_axis_tvalid 1 4 2 NJ 700 N
+preplace netloc DelayUnit_0_m2_axis_tvalid 1 6 1 1940
+preplace netloc DelayUnit_0_m4_axis_tvalid 1 6 1 1960
+preplace netloc clk_wiz_0_locked 1 1 1 N
+preplace netloc PWM_GENERATOR_1_PWM_OUT 1 9 1 NJ
+preplace netloc xadc_wiz_0_m_axis_tdata 1 3 1 660
+preplace netloc DelayUnit_0_m3_axis_tdata 1 6 1 2010
+preplace netloc SystemReset_0_nrst 1 2 7 370 1720 660 1720 NJ 1720 1450 1720 NJ 1720 NJ 1720 2970
+preplace netloc Vaux14_1 1 0 3 NJ 700 NJ 700 NJ
+preplace netloc DelayUnit_0_m0_axis_tvalid 1 6 1 1950
+preplace netloc DelayUnit_0_m0_axis_tdata 1 6 1 1940
+preplace netloc clk_wiz_0_clk_out1 1 1 8 180 1700 360 1700 650 1700 NJ 1700 1430 1700 1980 1700 2550 1700 2930
+preplace netloc PWM_GENERATOR_5_PWM_OUT 1 9 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 6 1 1980
+preplace netloc DelayUnit_0_m6_axis_tvalid 1 6 1 1890
+preplace netloc DelayUnit_0_m4_axis_tdata 1 6 1 1990
+preplace netloc xlconstant_0_dout 1 2 1 360
+preplace netloc PWM_GENERATOR_6_PWM_OUT 1 9 1 NJ
+preplace netloc DelayUnit_0_m2_axis_tdata 1 6 1 1890
+preplace netloc clk_in1_1 1 0 1 NJ
+preplace netloc all_pass_filter_0_s_axis_tready 1 3 1 650
+preplace netloc fir_compiler_4_m_axis_data_tvalid 1 7 1 2390
+preplace netloc fir_compiler_8_m_axis_data_tvalid 1 7 1 2540
+preplace netloc DelayUnit_0_m7_axis_tdata 1 6 1 1880
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_CHANNEL 1 5 1 N
+levelinfo -pg 1 0 100 270 510 840 1240 1650 2200 2690 3140 3310 -top 0 -bot 1770
 ",
 }
 

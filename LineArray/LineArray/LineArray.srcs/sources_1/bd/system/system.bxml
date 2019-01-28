@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1548341408"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1548341408"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1548341408"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1548690563"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1548690563"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1548690563"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\system_xadc_wiz_0_0\system_xadc_wiz_0_0.xci" Type="IP">
         <Instance HierarchyPath="xadc_wiz_0"/>
@@ -228,8 +228,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\system_translatorV2_0_0\system_translatorV2_0_0.xci" Type="IP">
-        <Instance HierarchyPath="translatorV2_0"/>
+      <File Name="ip\system_xbar_0\system_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="ps7_0_axi_periph/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\system_translatorV2_v1_0_0_0\system_translatorV2_v1_0_0_0.xci" Type="IP">
+        <Instance HierarchyPath="translatorV2_v1_0_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\system_SpeakerGain_v1_0_0_1\system_SpeakerGain_v1_0_0_1.xci" Type="IP">
+        <Instance HierarchyPath="SpeakerGain_v1_0_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

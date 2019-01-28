@@ -87,8 +87,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ps7_0_ax
 # IP: bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_rst_ps7_0_100M_0 || ORIG_REF_NAME==system_rst_ps7_0_100M_0}]
 
-# IP: bd/system/ip/system_translatorV2_0_0/system_translatorV2_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_translatorV2_0_0 || ORIG_REF_NAME==system_translatorV2_0_0}]
+# IP: bd/system/ip/system_xbar_0/system_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0}]
+
+# IP: bd/system/ip/system_translatorV2_v1_0_0_0/system_translatorV2_v1_0_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_translatorV2_v1_0_0_0 || ORIG_REF_NAME==system_translatorV2_v1_0_0_0}]
+
+# IP: bd/system/ip/system_SpeakerGain_v1_0_0_1/system_SpeakerGain_v1_0_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_SpeakerGain_v1_0_0_1 || ORIG_REF_NAME==system_SpeakerGain_v1_0_0_1}]
 
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0}]

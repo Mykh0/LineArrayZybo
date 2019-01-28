@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Thu Jan 24 15:50:04 2019
---Host        : Acer running 64-bit major release  (build 9200)
+--Date        : Mon Jan 28 16:49:16 2019
+--Host        : Mykho_Laptop running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -45,13 +45,7 @@ entity system_wrapper is
     PWM_OUT_8 : out STD_LOGIC;
     Vaux14_v_n : in STD_LOGIC;
     Vaux14_v_p : in STD_LOGIC;
-    clk_in1 : in STD_LOGIC;
-    debug2 : out STD_LOGIC;
-    debug3 : out STD_LOGIC;
-    debug4 : out STD_LOGIC;
-    debug5 : out STD_LOGIC;
-    debugPin : out STD_LOGIC;
-    validCheck : out STD_LOGIC
+    clk_in1 : in STD_LOGIC
   );
 end system_wrapper;
 
@@ -81,7 +75,6 @@ architecture STRUCTURE of system_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    debug5 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC;
     PWM_OUT : out STD_LOGIC;
     PWM_OUT_1 : out STD_LOGIC;
@@ -91,12 +84,7 @@ architecture STRUCTURE of system_wrapper is
     PWM_OUT_5 : out STD_LOGIC;
     PWM_OUT_6 : out STD_LOGIC;
     PWM_OUT_7 : out STD_LOGIC;
-    PWM_OUT_8 : out STD_LOGIC;
-    validCheck : out STD_LOGIC;
-    debug4 : out STD_LOGIC;
-    debugPin : out STD_LOGIC;
-    debug3 : out STD_LOGIC;
-    debug2 : out STD_LOGIC
+    PWM_OUT_8 : out STD_LOGIC
   );
   end component system;
 begin
@@ -134,12 +122,6 @@ system_i: component system
       PWM_OUT_8 => PWM_OUT_8,
       Vaux14_v_n => Vaux14_v_n,
       Vaux14_v_p => Vaux14_v_p,
-      clk_in1 => clk_in1,
-      debug2 => debug2,
-      debug3 => debug3,
-      debug4 => debug4,
-      debug5 => debug5,
-      debugPin => debugPin,
-      validCheck => validCheck
+      clk_in1 => clk_in1
     );
 end STRUCTURE;

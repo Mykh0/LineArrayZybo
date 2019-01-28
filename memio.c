@@ -9,6 +9,7 @@
 #include <sys/mman.h>
 #include <unistd.h>
 #include <stddef.h>
+#include <math.h>
 
 #define MAP_SIZE 4096UL
 #define MAP_MASK (MAP_SIZE -1)
@@ -64,16 +65,20 @@ static char * readFile(char* systemPath)
 
 int main() {
   const int beamCount = 8;
+  const int gainCount = 9;
   int* beam = getVirtualAddress(BEAM_BASE_ADDR);
+  int* gain = getVirtualAddress(GAIN_BASE_ADDR);
   int i = 0;
-  char beamBuffer[10];
+  int j = 0;
+  
 
     for(i = 0; i < beamCount; i++)
     {
-      char stringBuffer[10];
+      char stringBuffer[50];
       int beamVal = 0;
       int oldVal = 0;
       FILE * fp;
+      char beamBuffer[10];
 
       sprintf(stringBuffer, "/home/xillinux/linearray/beam%d.txt", i + 1);
       fp = fopen(stringBuffer, "r");
@@ -84,6 +89,20 @@ int main() {
         *((unsigned *) (beam + i)) = beamVal;
         printf("Value in register %d: %d\n", i, *((unsigned *) (beam + i)));
       }
+    }
+
+    for(j = 0; j < gainCount; j++)
+    {
+      char filePath[50];
+      char gainBuffer[10];
+      int gainVal = 0;
+      FILE * filePoint;
+      sprintf(filePath, "/home/xillinux/linearray/gain%d.txt", j);
+      filePoint = fopen(filePath, "r");
+      fread(gainBuffer, 10, 1, filePoint);
+      gainVal = (int)floor((double)655.35 * (float)(atoi(gainBuffer)));
+      *((unsigned *) (gain + j)) = gainVal;
+      printf("Gain %d set to: %d\n", j, gainVal);
     }
     return 0;
 }

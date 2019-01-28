@@ -53,100 +53,104 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/EAAES/asignments/LineArray/LineArray.cache/wt [current_project]
-  set_property parent.project_path C:/EAAES/asignments/LineArray/LineArray.xpr [current_project]
-  set_property ip_repo_paths C:/EAAES/asignments/ip_repo/translatorV2_1.0 [current_project]
-  set_property ip_output_repo C:/EAAES/asignments/LineArray/LineArray.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo [current_project]
+  set_property ip_output_repo C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/EAAES/asignments/LineArray/LineArray.runs/synth_1/system_wrapper.dcp
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SystemReset_0_0/system_SystemReset_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SystemReset_0_0/system_SystemReset_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/system_fir_compiler_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/system_fir_compiler_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/system_fir_compiler_1_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/system_fir_compiler_1_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/system_fir_compiler_2_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/system_fir_compiler_2_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/system_fir_compiler_3_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/system_fir_compiler_3_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/system_fir_compiler_4_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/system_fir_compiler_4_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/system_fir_compiler_5_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/system_fir_compiler_5_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/system_fir_compiler_6_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/system_fir_compiler_6_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/system_fir_compiler_7_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/system_fir_compiler_7_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/system_fir_compiler_8_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/system_fir_compiler_8_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_0_2/system_PWM_GENERATOR_0_2.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_0_2/system_PWM_GENERATOR_0_2.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_1_0/system_PWM_GENERATOR_1_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_1_0/system_PWM_GENERATOR_1_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_2_0/system_PWM_GENERATOR_2_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_2_0/system_PWM_GENERATOR_2_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_3_0/system_PWM_GENERATOR_3_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_3_0/system_PWM_GENERATOR_3_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_4_0/system_PWM_GENERATOR_4_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_4_0/system_PWM_GENERATOR_4_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_5_0/system_PWM_GENERATOR_5_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_5_0/system_PWM_GENERATOR_5_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_6_0/system_PWM_GENERATOR_6_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_6_0/system_PWM_GENERATOR_6_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_7_0/system_PWM_GENERATOR_7_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_7_0/system_PWM_GENERATOR_7_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_8_0/system_PWM_GENERATOR_8_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_8_0/system_PWM_GENERATOR_8_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_all_pass_filter_0_0/system_all_pass_filter_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_all_pass_filter_0_0/system_all_pass_filter_0_0.dcp]
-  add_files -quiet C:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_DelayUnit_0_0/system_DelayUnit_0_0.dcp
-  set_property netlist_only true [get_files C:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_DelayUnit_0_0/system_DelayUnit_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp]
-  add_files -quiet C:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_0_0/system_translatorV2_0_0.dcp
-  set_property netlist_only true [get_files C:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_0_0/system_translatorV2_0_0.dcp]
-  add_files -quiet c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp
-  set_property netlist_only true [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp]
-  read_xdc -ref system_xadc_wiz_0_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref system_clk_wiz_0_0 -cells inst c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc]
-  read_xdc -ref system_clk_wiz_0_0 -cells inst c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc]
-  read_xdc -ref system_fir_compiler_0_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_1_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_2_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_3_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_4_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_5_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_6_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_7_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_fir_compiler_8_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/constraints/fir_compiler_v7_2.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/constraints/fir_compiler_v7_2.xdc]
-  read_xdc -ref system_processing_system7_0_0 -cells inst c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref system_rst_ps7_0_100M_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc]
-  read_xdc -ref system_rst_ps7_0_100M_0 -cells U0 c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc
-  set_property processing_order EARLY [get_files c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]
-  read_xdc C:/EAAES/asignments/LineArray/LineArray.srcs/constrs_1/new/constrains.xdc
+  add_files -quiet C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/system_wrapper.dcp
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SystemReset_0_0/system_SystemReset_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SystemReset_0_0/system_SystemReset_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/system_fir_compiler_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/system_fir_compiler_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/system_fir_compiler_1_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/system_fir_compiler_1_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/system_fir_compiler_2_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/system_fir_compiler_2_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/system_fir_compiler_3_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/system_fir_compiler_3_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/system_fir_compiler_4_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/system_fir_compiler_4_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/system_fir_compiler_5_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/system_fir_compiler_5_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/system_fir_compiler_6_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/system_fir_compiler_6_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/system_fir_compiler_7_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/system_fir_compiler_7_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/system_fir_compiler_8_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/system_fir_compiler_8_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_0_2/system_PWM_GENERATOR_0_2.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_0_2/system_PWM_GENERATOR_0_2.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_1_0/system_PWM_GENERATOR_1_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_1_0/system_PWM_GENERATOR_1_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_2_0/system_PWM_GENERATOR_2_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_2_0/system_PWM_GENERATOR_2_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_3_0/system_PWM_GENERATOR_3_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_3_0/system_PWM_GENERATOR_3_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_4_0/system_PWM_GENERATOR_4_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_4_0/system_PWM_GENERATOR_4_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_5_0/system_PWM_GENERATOR_5_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_5_0/system_PWM_GENERATOR_5_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_6_0/system_PWM_GENERATOR_6_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_6_0/system_PWM_GENERATOR_6_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_7_0/system_PWM_GENERATOR_7_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_7_0/system_PWM_GENERATOR_7_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_8_0/system_PWM_GENERATOR_8_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_PWM_GENERATOR_8_0/system_PWM_GENERATOR_8_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_all_pass_filter_0_0/system_all_pass_filter_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_all_pass_filter_0_0/system_all_pass_filter_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_DelayUnit_0_0/system_DelayUnit_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_DelayUnit_0_0/system_DelayUnit_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.dcp]
+  add_files -quiet C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp
+  set_property netlist_only true [get_files C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_v1_0_0_0/system_translatorV2_v1_0_0_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_v1_0_0_0/system_translatorV2_v1_0_0_0.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SpeakerGain_v1_0_0_1/system_SpeakerGain_v1_0_0_1.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SpeakerGain_v1_0_0_1/system_SpeakerGain_v1_0_0_1.dcp]
+  add_files -quiet c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp
+  set_property netlist_only true [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp]
+  read_xdc -ref system_xadc_wiz_0_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_xadc_wiz_0_0/system_xadc_wiz_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref system_clk_wiz_0_0 -cells inst c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc]
+  read_xdc -ref system_clk_wiz_0_0 -cells inst c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc]
+  read_xdc -ref system_fir_compiler_0_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_1_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_1_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_2_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_2_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_3_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_3_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_4_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_4_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_5_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_5_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_6_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_6_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_7_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_7_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_fir_compiler_8_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/constraints/fir_compiler_v7_2.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_fir_compiler_8_0/constraints/fir_compiler_v7_2.xdc]
+  read_xdc -ref system_processing_system7_0_0 -cells inst c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref system_rst_ps7_0_100M_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc]
+  read_xdc -ref system_rst_ps7_0_100M_0 -cells U0 c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc
+  set_property processing_order EARLY [get_files c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]
+  read_xdc C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/constrs_1/new/constrains.xdc
   link_design -top system_wrapper -part xc7z010clg400-1
   write_hwdef -file system_wrapper.hwdef
   close_msg_db -file init_design.pb

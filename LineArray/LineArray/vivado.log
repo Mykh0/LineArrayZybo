@@ -1,0 +1,1235 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Jan 25 15:01:58 2019
+# Process ID: 34240
+# Current directory: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18992 C:\Users\Mykho\Documents\repos\LineArrayZybo\LineArray\LineArray\LineArray.xpr
+# Log file: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/vivado.log
+# Journal file: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.xpr
+INFO: [Project 1-313] Project file moved from 'C:/EAAES/asignments/LineArray' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0', nor could it be found using path 'C:/EAAES/asignments/ip_repo/translatorV2_1.0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_translatorV2_0_0
+
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 829.234 ; gain = 182.969
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Fri Jan 25 15:02:58 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+create_peripheral xilinx.com user SpeakerGain 1.0 -dir C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:SpeakerGain:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core xilinx.com:user:SpeakerGain:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:SpeakerGain:1.0]
+set_property  ip_repo_paths  {C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/../ip_repo/SpeakerGain_1.0 C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0} [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+source -notrace c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0/example_designs/bfm_design/design.tcl
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/SpeakerGain_v1_0_bfm_1/SpeakerGain_v1_0_bfm_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 969.445 ; gain = 9.551
+WARNING: [IP_Flow 19-2162] IP 'SpeakerGain_v1_0_bfm_1_master_0_0' is locked:
+* IP 'SpeakerGain_v1_0_bfm_1_master_0_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+ERROR: [BD 41-541] Parameter cannot be set on a locked block. The block 'master_0' is locked, because : * IP 'SpeakerGain_v1_0_bfm_1_master_0_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information. 
+ERROR: [BD 41-245] set_property error - Parameter cannot be set on a locked block. The block 'master_0' is locked, because: * IP 'SpeakerGain_v1_0_bfm_1_master_0_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information..
+
+INFO: [Common 17-17] undo 'set_property'
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+
+    while executing
+"rdi::add_properties -dict {CONFIG.C_PROTOCOL_SELECTION 2} /master_0"
+    invoked from within
+"set_property -dict [ list CONFIG.C_PROTOCOL_SELECTION {2} ] $master_0"
+    (procedure "create_ipi_design" line 17)
+    invoked from within
+"create_ipi_design interface_address_vh_file ${design_name}"
+    (file "c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0/example_designs/bfm_design/design.tcl" line 76)
+remove_files  C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/SpeakerGain_v1_0_bfm_1/SpeakerGain_v1_0_bfm_1.bd
+open_bd_design {C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding cell -- xilinx.com:ip:clk_wiz:5.3 - clk_wiz_0
+Adding cell -- xilinx.com:module_ref:SystemReset:1.0 - SystemReset_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_1
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_2
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_3
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_4
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_5
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_6
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_7
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_8
+Adding cell -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_0
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_1
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_2
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_3
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_4
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_5
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_6
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_7
+Adding cell -- xilinx.com:module_ref:PWM_GENERATOR:1.0 - PWM_GENERATOR_8
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:module_ref:all_pass_filter:1.0 - all_pass_filter_0
+Adding cell -- xilinx.com:module_ref:DelayUnit:1.0 - DelayUnit_0
+Adding cell -- xilinx.com:user:translatorV2:1.0 - translatorV2_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /SystemReset_0/nrst(undef) and /xadc_wiz_0/m_axis_resetn(rst)
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd>
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:SpeakerGain:1.0 SpeakerGain_0
+endgroup
+ipx::edit_ip_in_project -upgrade true -name SpeakerGain_v1_0_project -directory C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.tmp/SpeakerGain_v1_0_project c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/mykho/documents/repos/linearrayzybo/linearray/linearray/linearray.tmp/speakergain_v1_0_project'
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm0_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm1_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm2_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm3_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm4_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm5_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm6_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm7_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm8_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm0_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1084.160 ; gain = 6.844
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1084.160 ; gain = 6.844
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-4300] HDL parameter 'C_S00_AXI_ADDR_WIDTH' has its value changed from '4' to '6'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 's00_axi_aresetn' as interface 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's00_axi_aclk' as interface 's00_axi_aclk'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+ipx::merge_project_changes: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3308.324 ; gain = 0.000
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\Users\Mykho\Documents\repos\LineArrayZybo\LineArray\ip_repo\SpeakerGain_1.0\xilinx.com_user_SpeakerGain_1.0.zip} [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name SpeakerGain_v1_0_project -directory C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.tmp/SpeakerGain_v1_0_project c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/mykho/documents/repos/linearrayzybo/linearray/linearray/linearray.tmp/speakergain_v1_0_project'
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm0_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm1_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm2_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm3_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm4_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm5_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm6_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm7_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm8_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm0_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 3498.578 ; gain = 4.406
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 3498.578 ; gain = 4.406
+set_property version 1.1 [ipx::current_core]
+set_property previous_version_for_upgrade xilinx.com:user:SpeakerGain:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\Users\Mykho\Documents\repos\LineArrayZybo\LineArray\ip_repo\SpeakerGain_1.0\xilinx.com_user_SpeakerGain_1.1.zip} [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'
+update_ip_catalog: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 3614.047 ; gain = 51.414
+report_ip_status -name ip_status 
+upgarde_ip [get_ips]
+invalid command name "upgarde_ip"
+upgrade_ip [get_ips]
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_DelayUnit_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_0_2'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_1_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_2_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_3_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_4_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_5_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_6_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_7_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_PWM_GENERATOR_8_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_SystemReset_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_all_pass_filter_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_clk_wiz_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_1_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_2_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_3_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_4_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_5_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_6_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_7_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_fir_compiler_8_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_processing_system7_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_ps7_0_axi_periph_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_rst_ps7_0_100M_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_translatorV2_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_xadc_wiz_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_xlconstant_0_0'
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm0_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm1_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm2_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm3_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm4_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm5_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm6_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm7_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm8_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm0_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+Upgrading 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'C_S00_AXI_ADDR_WIDTH' from '6' to '4' has been ignored for IP 'system_SpeakerGain_0_0'
+WARNING: [IP_Flow 19-3501] Upgraded system_SpeakerGain_0_0 from SpeakerGain_v1.0 1.0 to SpeakerGain_v1.0 1.1, with warnings. Please review the message log.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'IP system_SpeakerGain_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+upgrade_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 3642.348 ; gain = 0.000
+c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SpeakerGain_0_0/system_SpeakerGain_0_0.xci
+delete_bd_objs [get_bd_cells SpeakerGain_0]
+save_bd_design
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+[Fri Jan 25 15:38:39 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+[Fri Jan 25 15:38:39 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:SpeakerGain:1.1 SpeakerGain_0
+endgroup
+set_property location {6.5 2675 693} [get_bd_cells SpeakerGain_0]
+set_property location {7 2723 524} [get_bd_cells SpeakerGain_0]
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tdata] [get_bd_nets fir_compiler_0_m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir_compiler_0/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata0]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_0/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_0/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid0]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_0/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+delete_bd_objs [get_bd_nets fir_compiler_1_m_axis_data_tdata] [get_bd_nets fir_compiler_1_m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir_compiler_1/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata1]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_1/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_1/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid1]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_1/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+set_property location {7 2675 865} [get_bd_cells SpeakerGain_0]
+delete_bd_objs [get_bd_nets fir_compiler_2_m_axis_data_tdata] [get_bd_nets fir_compiler_3_m_axis_data_tvalid] [get_bd_nets fir_compiler_2_m_axis_data_tvalid] [get_bd_nets fir_compiler_3_m_axis_data_tdata] [get_bd_nets fir_compiler_4_m_axis_data_tdata] [get_bd_nets fir_compiler_4_m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir_compiler_2/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata2]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_2/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_2/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid2]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_2/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_3/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata3]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_3/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_4/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata4]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_4/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_3/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid3]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_3/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_4/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid4]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_4/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+set_property location {7 2708 1346} [get_bd_cells SpeakerGain_0]
+delete_bd_objs [get_bd_nets fir_compiler_8_m_axis_data_tdata] [get_bd_nets fir_compiler_7_m_axis_data_tvalid] [get_bd_nets fir_compiler_7_m_axis_data_tdata] [get_bd_nets fir_compiler_5_m_axis_data_tdata] [get_bd_nets fir_compiler_6_m_axis_data_tdata] [get_bd_nets fir_compiler_5_m_axis_data_tvalid] [get_bd_nets fir_compiler_6_m_axis_data_tvalid] [get_bd_nets fir_compiler_8_m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir_compiler_5/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata5]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_5/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_5/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid5]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_5/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_6/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata6]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_6/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_6/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid6]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_6/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_7/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata7]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_7/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_7/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid7]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_7/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_8/m_axis_data_tdata] [get_bd_pins SpeakerGain_0/s_tdata8]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_8/m_axis_data_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+connect_bd_net [get_bd_pins fir_compiler_8/m_axis_data_tvalid] [get_bd_pins SpeakerGain_0/s_tvalid8]
+WARNING: [BD 41-1306] The connection to interface pin /fir_compiler_8/m_axis_data_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+set_property location {7 2682 949} [get_bd_cells SpeakerGain_0]
+set_property location {7 2679 622} [get_bd_cells SpeakerGain_0]
+set_property location {7 2675 402} [get_bd_cells SpeakerGain_0]
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata0] [get_bd_pins PWM_GENERATOR_0/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_0/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid0] [get_bd_pins PWM_GENERATOR_0/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_0/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata1] [get_bd_pins PWM_GENERATOR_1/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_1/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid1] [get_bd_pins PWM_GENERATOR_1/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_1/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+set_property location {7 2768 803} [get_bd_cells SpeakerGain_0]
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata2] [get_bd_pins PWM_GENERATOR_2/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_2/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid2] [get_bd_pins PWM_GENERATOR_2/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_2/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+set_property location {7 2716 1169} [get_bd_cells SpeakerGain_0]
+set_property location {7 2749 1368} [get_bd_cells SpeakerGain_0]
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata3] [get_bd_pins PWM_GENERATOR_3/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_3/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid3] [get_bd_pins PWM_GENERATOR_3/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_3/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+set_property location {7 2744 1721} [get_bd_cells SpeakerGain_0]
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata4] [get_bd_pins PWM_GENERATOR_4/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_4/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid4] [get_bd_pins PWM_GENERATOR_4/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_4/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata5] [get_bd_pins PWM_GENERATOR_5/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_5/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid5] [get_bd_pins PWM_GENERATOR_5/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_5/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata6] [get_bd_pins PWM_GENERATOR_6/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_6/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid6] [get_bd_pins PWM_GENERATOR_6/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_6/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata7] [get_bd_pins PWM_GENERATOR_7/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_7/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid7] [get_bd_pins PWM_GENERATOR_7/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_7/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+set_property location {7 2771 2031} [get_bd_cells SpeakerGain_0]
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tdata8] [get_bd_pins PWM_GENERATOR_8/S_AXIS_TDATA]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_8/S_AXIS_TDATA is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+connect_bd_net [get_bd_pins SpeakerGain_0/m_tvalid8] [get_bd_pins PWM_GENERATOR_8/S_AXIS_TVALID]
+WARNING: [BD 41-1306] The connection to interface pin /PWM_GENERATOR_8/S_AXIS_TVALID is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins SpeakerGain_0/S00_AXI]
+</SpeakerGain_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+apply_bd_automation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 3746.527 ; gain = 0.000
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+[Fri Jan 25 15:48:16 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+[Fri Jan 25 15:48:17 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3746.527 ; gain = 0.000
+reset_run system_SpeakerGain_0_1_synth_1
+reset_run system_xbar_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+[Fri Jan 25 15:49:20 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+[Fri Jan 25 15:49:20 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+report_ip_status -name ip_status 
+reset_run system_SpeakerGain_0_1_synth_1
+reset_run system_xbar_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+[Fri Jan 25 15:52:21 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+[Fri Jan 25 15:52:21 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* BD design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_translatorV2_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* BD design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_translatorV2_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+report_ip_status
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Jan 25 15:55:26 2019
+| Host         : Mykho_Laptop running 64-bit major release  (build 9200)
+| Command      : report_ip_status
+------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 29 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| Instance Name                 | Status                  | Recommendation               | Change    | IP Name            | IP      | New Version   | New        | Original Part        |
+|                               |                         |                              | Log       |                    | Version |               | License    |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_DelayUnit_0_0          | Up-to-date              | No changes required          | Change    | DelayUnit_v1_0     | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_0_2      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_1_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_2_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_3_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_4_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_5_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_6_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_7_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_PWM_GENERATOR_8_0      | Up-to-date              | No changes required          | Change    | PWM_GENERATOR_v1_0 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_SpeakerGain_0_1        | Up-to-date              | No changes required          | Change    | SpeakerGain_v1.0   | 1.1     | 1.1 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_SystemReset_0_0        | Up-to-date              | No changes required          | Change    | SystemReset_v1_0   | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_all_pass_filter_0_0    | Up-to-date              | No changes required          | Change    | all_pass_filter_v1 | 1.0     | 1.0 (Rev. 1)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 1)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_clk_wiz_0_0            | Up-to-date              | No changes required          |  *(1)     | Clocking Wizard    | 5.3     | 5.3 (Rev. 3)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 3)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_0_0       | Up-to-date              | No changes required          |  *(2)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_1_0       | Up-to-date              | No changes required          |  *(3)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_2_0       | Up-to-date              | No changes required          |  *(4)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_3_0       | Up-to-date              | No changes required          |  *(5)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_4_0       | Up-to-date              | No changes required          |  *(6)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_5_0       | Up-to-date              | No changes required          |  *(7)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_6_0       | Up-to-date              | No changes required          |  *(8)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_7_0       | Up-to-date              | No changes required          |  *(9)     | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_fir_compiler_8_0       | Up-to-date              | No changes required          |  *(10)    | FIR Compiler       | 7.2     | 7.2 (Rev. 7)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 7)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_processing_system7_0_0 | Up-to-date              | No changes required          |  *(11)    | ZYNQ7 Processing   | 5.5     | 5.5 (Rev. 3)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           | System             | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 3)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_ps7_0_axi_periph_0     | Up-to-date              | No changes required          |  *(12)    | AXI Interconnect   | 2.1     | 2.1 (Rev. 12) | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 12)     |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_rst_ps7_0_100M_0       | Up-to-date              | No changes required          |  *(13)    | Processor System   | 5.0     | 5.0 (Rev. 10) | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           | Reset              | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 10)     |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_translatorV2_0_0       | IP definition not found | Add IP definition to catalog | Change    | translatorV2       | 1.0     | N/A           | Included   | xc7z010clg400-1      |
+|                               |                         |                              | Log not   |                    | (Rev.   |               |            |                      |
+|                               |                         |                              | available |                    | 17)     |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_xadc_wiz_0_0           | Up-to-date              | No changes required          |  *(14)    | XADC Wizard        | 3.3     | 3.3 (Rev. 2)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 2)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| system_xlconstant_0_0         | Up-to-date              | No changes required          |  *(15)    | Constant           | 1.1     | 1.1 (Rev. 2)  | Included   | xc7z010clg400-1      |
+|                               |                         |                              |           |                    | (Rev.   |               |            |                      |
+|                               |                         |                              |           |                    | 2)      |               |            |                      |
++-------------------------------+-------------------------+------------------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+*(1) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/clk_wiz_v5_3/doc/clk_wiz_v5_3_changelog.txt
+*(2) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(3) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(4) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(5) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(6) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(7) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(8) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(9) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(10) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/fir_compiler_v7_2/doc/fir_compiler_v7_2_changelog.txt
+*(11) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/processing_system7_v5_5/doc/processing_system7_v5_5_changelog.txt
+*(12) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/axi_interconnect_v2_1/doc/axi_interconnect_v2_1_changelog.txt
+*(13) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(14) c:/Xilinx/Vivado/2016.4/data/ip/xilinx/xadc_wiz_v3_3/doc/xadc_wiz_v3_3_changelog.txt
+*(15) c:/Xilinx/Vivado/2016.4/data/rsb/iprepos/xilinx.com_ip_xlconstant_1.1/doc/xlconstant_v1_1_changelog.txt
+
+
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/translatorV2_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'.
+set_property  ip_repo_paths  {c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0 C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+set_property  ip_repo_paths  c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+reset_run synth_1
+reset_run system_SpeakerGain_0_1_synth_1
+reset_run system_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd
+
+[Fri Jan 25 16:01:30 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1, synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+[Fri Jan 25 16:01:30 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+regenerate_bd_layout
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* BD design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_translatorV2_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+create_bd_cell -type module -reference Axi_translator Axi_translator_0
+set_property location {7 2471 2144} [get_bd_cells Axi_translator_0]
+set_property location {7 2472 2085} [get_bd_cells Axi_translator_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {7 2472 2085} [get_bd_cells Axi_translator_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {7 2471 2144} [get_bd_cells Axi_translator_0]'
+delete_bd_objs [get_bd_cells Axi_translator_0]
+update_module_reference system_Axi_translator_0_0
+ERROR: [filemgmt 56-189] Failed to resolve reference. Nothing was found in the project to match the name 'Axi_translator'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+save_bd_design
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+create_bd_cell -type module -reference Translator_v1_0_S00_AXI Translator_v1_0_S00_AXI_0
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXI' of definition 'xilinx.com:interface:aximm:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'S_AXI_ARESETN' as interface 'S_AXI_ARESETN'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXI_ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXI_ACLK' as interface 'S_AXI_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXI_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXI'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXI_ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'S_AXI_ARESETN'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+delete_bd_objs [get_bd_cells Translator_v1_0_S00_AXI_0]
+update_module_reference system_Translator_v1_0_S00_AXI_0_0
+ERROR: [filemgmt 56-189] Failed to resolve reference. Nothing was found in the project to match the name 'Translator_v1_0_S00_AXI'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+add_files -norecurse {C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/Translator_1.0/hdl/Translator_v1_0.vhd C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/Translator_1.0/hdl/Translator_v1_0_S00_AXI.vhd}
+remove_files  C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/Translator_1.0/hdl/Translator_v1_0.vhd
+create_bd_cell -type module -reference Translator_v1_0 Translator_v1_0_0
+INFO: [IP_Flow 19-2228] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 's00_axi_aresetn' as interface 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's00_axi_aclk' as interface 's00_axi_aclk'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+delete_bd_objs [get_bd_cells Translator_v1_0_0]
+add_files -norecurse {C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/entity.vhd C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/impl.vhd C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/tb.vhd}
+remove_files  C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/tb.vhd
+remove_files  C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Converter.vhd
+create_bd_cell -type module -reference translatorV2_v1_0 translatorV2_v1_0_0
+INFO: [IP_Flow 19-2228] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 's00_axi_aresetn' as interface 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's00_axi_aclk' as interface 's00_axi_aclk'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+WARNING: [IP_Flow 19-3571] IP 'system_translatorV2_v1_0_0_0' is restricted:
+* Detected changes to module reference file(s).
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+set_property location {7 2537 2211} [get_bd_cells translatorV2_v1_0_0]
+delete_bd_objs [get_bd_ports debugPin] [get_bd_ports debug4] [get_bd_ports debug3] [get_bd_ports debug2]
+delete_bd_objs [get_bd_nets translatorV2_0_S00_CONFIG_CHANNEL] [get_bd_nets translatorV2_0_S00_CONFIG_DATA1] [get_bd_nets translatorV2_0_S00_CONFIG_DATA3] [get_bd_nets translatorV2_0_S00_CONFIG_DATA5] [get_bd_nets translatorV2_0_S00_CONFIG_DATA7] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets translatorV2_0_S00_CONFIG_DATA0] [get_bd_nets DelayUnit_0_config_ready] [get_bd_nets Axi_translator_0_CONFIG_ENABLE] [get_bd_nets translatorV2_0_S00_CONFIG_DATA2] [get_bd_nets translatorV2_0_S00_CONFIG_DATA4] [get_bd_nets translatorV2_0_S00_CONFIG_DATA6] [get_bd_nets translatorV2_0_S00_CONFIG_VALID] [get_bd_cells translatorV2_0]
+set_property location {7 2549 1904} [get_bd_cells translatorV2_v1_0_0]
+set_property location {7 2519 1579} [get_bd_cells translatorV2_v1_0_0]
+set_property location {7 2529 1575} [get_bd_cells translatorV2_v1_0_0]
+update_module_reference system_Translator_v1_0_0_0
+ERROR: [filemgmt 56-189] Failed to resolve reference. Nothing was found in the project to match the name 'Translator_v1_0'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+connect_bd_intf_net [get_bd_intf_pins translatorV2_v1_0_0/s00_axi] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/s00_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+set_property location {5 1445 906} [get_bd_cells DelayUnit_0]
+set_property location {4 943 998} [get_bd_cells translatorV2_v1_0_0]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_CHANNEL] [get_bd_pins DelayUnit_0/config_channel]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA0] [get_bd_pins DelayUnit_0/config_data0]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA1] [get_bd_pins DelayUnit_0/config_data1]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA2] [get_bd_pins DelayUnit_0/config_data2]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA3] [get_bd_pins DelayUnit_0/config_data3]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA4] [get_bd_pins DelayUnit_0/config_data4]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA5] [get_bd_pins DelayUnit_0/config_data5]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA6] [get_bd_pins DelayUnit_0/config_data6]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_DATA7] [get_bd_pins DelayUnit_0/config_data7]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_VALID] [get_bd_pins DelayUnit_0/config_valid]
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_ENABLE] [get_bd_pins DelayUnit_0/config_enable]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+reset_run system_SpeakerGain_0_1_synth_1
+reset_run system_xbar_0_synth_1
+save_bd_design
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+CRITICAL WARNING: [BD 41-1356] Address block </translatorV2_v1_0_0/s00_axi/reg0> is not mapped into </processing_system7_0/Data>. Please use Address Editor to either map or exclude it.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/translatorV2_v1_0_0/S00_CONFIG_READY
+
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.vhd
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SystemReset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block all_pass_filter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DelayUnit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SpeakerGain_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block translatorV2_v1_0_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_mmu .
+Exporting to file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 30.274 MB.
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/entity.vhd" into library xil_defaultlib [C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/entity.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/impl.vhd" into library xil_defaultlib [C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/impl.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/entity.vhd" into library xil_defaultlib [C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/entity.vhd:1]
+INFO: [HDL 9-1061] Parsing VHDL file "C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/impl.vhd" into library xil_defaultlib [C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/Translator/impl.vhd:1]
+[Fri Jan 25 16:18:03 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1, system_translatorV2_v1_0_0_0_synth_1, system_s00_mmu_0_synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+system_translatorV2_v1_0_0_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_translatorV2_v1_0_0_0_synth_1/runme.log
+system_s00_mmu_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_s00_mmu_0_synth_1/runme.log
+[Fri Jan 25 16:18:03 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 4976.824 ; gain = 113.734
+connect_bd_net [get_bd_pins translatorV2_v1_0_0/S00_CONFIG_READY] [get_bd_pins DelayUnit_0/config_ready]
+reset_run system_s00_mmu_0_synth_1
+reset_run synth_1
+reset_run system_xbar_0_synth_1
+reset_run system_translatorV2_v1_0_0_0_synth_1
+assign_bd_address [get_bd_addr_segs {translatorV2_v1_0_0/s00_axi/reg0 }]
+</translatorV2_v1_0_0/s00_axi/reg0> is being mapped into </processing_system7_0/Data> at <0x43C10000 [ 64K ]>
+set_property offset 0x54300000 [get_bd_addr_segs {processing_system7_0/Data/SEG_translatorV2_v1_0_0_reg0}]
+set_property offset 0x64300000 [get_bd_addr_segs {processing_system7_0/Data/SEG_SpeakerGain_0_S00_AXI_reg}]
+save_bd_design
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_run system_SpeakerGain_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.vhd
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SystemReset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block all_pass_filter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DelayUnit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SpeakerGain_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block translatorV2_v1_0_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 30.274 MB.
+[Fri Jan 25 16:19:44 2019] Launched system_SpeakerGain_0_1_synth_1, system_xbar_0_synth_1, system_translatorV2_v1_0_0_0_synth_1, synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_xbar_0_synth_1/runme.log
+system_translatorV2_v1_0_0_0_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_translatorV2_v1_0_0_0_synth_1/runme.log
+synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+[Fri Jan 25 16:19:44 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 5011.441 ; gain = 34.617
+ipx::edit_ip_in_project -upgrade true -name SpeakerGain_v1_1_project -directory C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.tmp/SpeakerGain_v1_1_project c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo/SpeakerGain_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/mykho/documents/repos/linearrayzybo/linearray/linearray/linearray.tmp/speakergain_v1_1_project'
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm0_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm1_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm2_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm3_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm4_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm5_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm6_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm7_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm8_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm0_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'S_AXIS_ACLK' as interface 'S_AXIS_ACLK'.
+INFO: [IP_Flow 19-4728] Bus Interface 'S_AXIS_ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'S_AXIS'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'rst' as interface 'rst'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'clk' as interface 'clk'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis:s_axis'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-2228] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 's00_axi_aresetn' as interface 's00_axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 's00_axi_aclk' as interface 's00_axi_aclk'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'.
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 5076.625 ; gain = 23.281
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+INFO: [IP_Flow 19-799] Syncing upgrade version meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5076.625 ; gain = 23.281
+add_files -norecurse C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/Sources/SpeakerGain/Gain_inst.vhd
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\Users\Mykho\Documents\repos\LineArrayZybo\LineArray\ip_repo\SpeakerGain_1.0\xilinx.com_user_SpeakerGain_1.1.zip} [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/ip_repo'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:SpeakerGain:1.1 [get_ips  system_SpeakerGain_0_1] -log ip_upgrade.log
+Upgrading 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd'
+INFO: [IP_Flow 19-3422] Upgraded system_SpeakerGain_0_1 (SpeakerGain_v1.0 1.1) from revision 1 to revision 2
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips system_SpeakerGain_0_1] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_2 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_1 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_3 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_4 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_5 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_6 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_7 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_8 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+INFO: [xilinx.com:ip:fir_compiler:7.2-913] /fir_compiler_0 Data_Sign has been set to manual on the GUI. It will not be updated during validation with a propagated value.
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.vhd
+VHDL Output written to : C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system_wrapper.vhd
+Wrote  : <C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/system.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SystemReset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PWM_GENERATOR_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block all_pass_filter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DelayUnit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SpeakerGain_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block translatorV2_v1_0_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/hdl/system.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 9c79d2caab37f64a; cache size = 30.761 MB.
+[Fri Jan 25 16:24:48 2019] Launched system_SpeakerGain_0_1_synth_1, synth_1...
+Run output will be captured here:
+system_SpeakerGain_0_1_synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_0_1_synth_1/runme.log
+synth_1: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/synth_1/runme.log
+[Fri Jan 25 16:24:49 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 5157.629 ; gain = 57.836
+report_ip_status -name ip_status 

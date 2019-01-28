@@ -1,0 +1,569 @@
+
+*** Running vivado
+    with args -log system_delay_unit_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_delay_unit_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source system_delay_unit_0_0.tcl -notrace
+Command: synth_design -top system_delay_unit_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6312 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 292.828 ; gain = 82.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_delay_unit_0_0' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_delay_unit_0_0/synth/system_delay_unit_0_0.vhd:106]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'delay_unit_v1_1' declared at 'c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:5' bound to instance 'U0' of component 'delay_unit_v1_1' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_delay_unit_0_0/synth/system_delay_unit_0_0.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'delay_unit_v1_1' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:80]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+WARNING: [Synth 8-5640] Port 's_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 's_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 's_axis_tready' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 's_axis_tid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'clk' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'nrst' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm0_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm0_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm1_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm1_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm2_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm2_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm3_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm3_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm4_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm4_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm5_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm5_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm6_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm6_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm7_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm7_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm8_axis_tdata' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+WARNING: [Synth 8-5640] Port 'm8_axis_tvalid' is missing in component declaration [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:83]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'delay_unit_v1_1_S00_AXI' declared at 'c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:5' bound to instance 'delay_unit_v1_1_S00_AXI_inst' of component 'delay_unit_v1_1_S00_AXI' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'delay_unit_v1_1_S00_AXI' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:116]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay_unit_v1_1_S00_AXI' (1#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:116]
+WARNING: [Synth 8-3848] Net s_axis_tready in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:21]
+WARNING: [Synth 8-3848] Net m0_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:25]
+WARNING: [Synth 8-3848] Net m0_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:26]
+WARNING: [Synth 8-3848] Net m1_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:28]
+WARNING: [Synth 8-3848] Net m1_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:29]
+WARNING: [Synth 8-3848] Net m2_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:31]
+WARNING: [Synth 8-3848] Net m2_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:32]
+WARNING: [Synth 8-3848] Net m3_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:34]
+WARNING: [Synth 8-3848] Net m3_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:35]
+WARNING: [Synth 8-3848] Net m4_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:37]
+WARNING: [Synth 8-3848] Net m4_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:38]
+WARNING: [Synth 8-3848] Net m5_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:40]
+WARNING: [Synth 8-3848] Net m5_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:41]
+WARNING: [Synth 8-3848] Net m6_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:43]
+WARNING: [Synth 8-3848] Net m6_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:44]
+WARNING: [Synth 8-3848] Net m7_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:46]
+WARNING: [Synth 8-3848] Net m7_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:47]
+WARNING: [Synth 8-3848] Net m8_axis_tdata in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:49]
+WARNING: [Synth 8-3848] Net m8_axis_tvalid in module/entity delay_unit_v1_1 does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'delay_unit_v1_1' (2#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'system_delay_unit_0_0' (3#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_delay_unit_0_0/synth/system_delay_unit_0_0.vhd:106]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tdata[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tid[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tid[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tid[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tid[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port s_axis_tid[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port s_axis_tready
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[15]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[14]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[13]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[12]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[11]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[10]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[9]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[8]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[7]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[6]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[5]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tdata[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m0_axis_tvalid
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[15]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[14]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[13]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[12]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[11]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[10]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[9]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[8]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[7]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[6]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[5]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tdata[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m1_axis_tvalid
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[15]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[14]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[13]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[12]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[11]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[10]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[9]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[8]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[7]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[6]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[5]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tdata[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m2_axis_tvalid
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[15]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[14]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[13]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[12]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[11]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[10]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[9]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[8]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[7]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[6]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[5]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tdata[0]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m3_axis_tvalid
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[15]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[14]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[13]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[12]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[11]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[10]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[9]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[8]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[7]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[6]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[5]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[4]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[3]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[2]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[1]
+WARNING: [Synth 8-3331] design delay_unit_v1_1 has unconnected port m4_axis_tdata[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 330.262 ; gain = 120.141
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[15] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[14] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[13] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[12] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[11] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[10] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[9] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[8] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[7] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[6] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[5] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tdata[4] to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:s_axis_tvalid to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:clk to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+WARNING: [Synth 8-3295] tying undriven pin delay_unit_v1_1_S00_AXI_inst:nrst to constant 0 [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1.vhd:116]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 330.262 ; gain = 120.141
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.253 . Memory (MB): peak = 695.137 ; gain = 0.227
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'm2_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:526]
+INFO: [Synth 8-4471] merging register 'm3_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:529]
+INFO: [Synth 8-4471] merging register 'm4_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:532]
+INFO: [Synth 8-4471] merging register 'm5_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:535]
+INFO: [Synth 8-4471] merging register 'm6_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:538]
+INFO: [Synth 8-4471] merging register 'm7_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:541]
+INFO: [Synth 8-4471] merging register 'm8_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:544]
+INFO: [Synth 8-4471] merging register 'm0_axis_tvalid_reg' into 'm1_axis_tvalid_reg' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/7fc5/hdl/delay_unit_v1_1_S00_AXI.vhd:517]
+INFO: [Synth 8-5545] ROM "stream1_samples" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "r_1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
++---Registers : 
+	               32 Bit    Registers := 26    
+	               16 Bit    Registers := 9     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	               4K Bit         RAMs := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	  10 Input     32 Bit        Muxes := 9     
+	   2 Input     16 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module delay_unit_v1_1_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
++---Registers : 
+	               32 Bit    Registers := 26    
+	               16 Bit    Registers := 9     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	               4K Bit         RAMs := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	  10 Input     32 Bit        Muxes := 9     
+	   2 Input     16 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stream1_samples" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "r_1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'U0/delay_unit_v1_1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/delay_unit_v1_1_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/delay_unit_v1_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/delay_unit_v1_1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/delay_unit_v1_1_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/delay_unit_v1_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/s_axis_tready_reg) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[31]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[30]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[29]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[28]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[27]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[26]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[25]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[24]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[23]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[22]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[21]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[20]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[19]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[18]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[17]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[16]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[15]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[14]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[13]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[12]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[11]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[10]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[9]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[8]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[7]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[6]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[5]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[4]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[3]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[2]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[1]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/count_reg[0]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[15]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[14]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[13]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[12]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[11]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[10]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[9]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[8]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[7]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[6]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[5]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[4]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[3]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[2]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[1]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m0_axis_tdata_reg[0]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/m1_axis_tvalid_reg) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[31]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[30]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[29]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[28]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[27]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[26]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[25]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[24]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[23]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[22]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[21]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[20]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[19]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[18]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[17]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[16]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[15]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[14]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[13]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[12]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[11]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[10]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[9]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[8]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[7]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[6]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[5]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[4]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[3]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[2]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[1]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/w_1_reg[0]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[31]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[30]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[29]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[28]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[27]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[26]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[25]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[24]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[23]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[22]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[21]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[20]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[19]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[18]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[17]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[16]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[15]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/delay_unit_v1_1_S00_AXI_inst/r_1_reg[14]) is unused and will be removed from module system_delay_unit_0_0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     4|
+|4     |LUT4 |     2|
+|5     |LUT6 |   133|
+|6     |FDRE |   329|
+|7     |FDSE |     4|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------------------------+------------------------+------+
+|      |Instance                         |Module                  |Cells |
++------+---------------------------------+------------------------+------+
+|1     |top                              |                        |   474|
+|2     |  U0                             |delay_unit_v1_1         |   474|
+|3     |    delay_unit_v1_1_S00_AXI_inst |delay_unit_v1_1_S00_AXI |   471|
++------+---------------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 695.137 ; gain = 485.016
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 193 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 695.137 ; gain = 113.164
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 695.137 ; gain = 485.016
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+137 Infos, 158 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 695.137 ; gain = 478.039
+INFO: [Common 17-1381] The checkpoint 'C:/EAAES/asignments/LineArray/LineArray.runs/system_delay_unit_0_0_synth_1/system_delay_unit_0_0.dcp' has been generated.
