@@ -168,14 +168,14 @@ architecture testing of gainTestbench is
       test: process
         begin
           S_TDATA0 <= X"C001";
-          AXI_REG0 <= X"0032";
+          AXI_REG0 <= X"FFFF";
           S_TVALID0 <= '1';
           wait for delay;
           assert M_TDATA0 = x"6000" report "M_TDATA0 is wrong" severity error;
           assert M_TVALID0 <= '1' report "M_TVALID0 FAIL" severity error;
           wait for delay;
           S_TDATA0 <= X"208D";
-          AXI_REG0 <= X"0016";
+          AXI_REG0 <= X"7FFF";
           wait for delay;
           assert M_TDATA0 = x"0729" report "M_TDATA0 is wrong" severity error;
           assert M_TVALID0 <= '0' report "M_TVALID0 FAIL" severity error;

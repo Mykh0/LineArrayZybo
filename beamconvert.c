@@ -65,7 +65,7 @@ int main(int argc, char **argv)
     char fileBuffer[10];
     int val = pwm[i];
 
-    sprintf(fileBuffer, "beam%d.txt", i);
+    sprintf(fileBuffer, "/home/xillinux/linearray/beamconvert/beam%d.txt", i);
     FILE *f;
     f = fopen(fileBuffer, "w");
     if(f == NULL) {

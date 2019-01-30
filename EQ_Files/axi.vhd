@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity SpeakerGain_v1_0_S00_AXI is
+entity EqS00Axi is
 	generic (
 		-- Users to add parameters here
 
@@ -89,9 +89,9 @@ entity SpeakerGain_v1_0_S00_AXI is
     		-- accept the read data and response information.
 		S_AXI_RREADY	: in std_logic
 	);
-end SpeakerGain_v1_0_S00_AXI;
+end EqS00Axi;
 
-architecture arch_imp of SpeakerGain_v1_0_S00_AXI is
+architecture arch_imp of EqS00Axi is
 
 	-- AXI4LITE signals
 	signal axi_awaddr	: std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -452,15 +452,18 @@ begin
 
 
 	-- Add user logic here
-	REG0 <= slv_reg0(7 downto 0);
-	REG1 <= slv_reg1(7 downto 0);
-	REG2 <= slv_reg2(7 downto 0);
-	REG3 <= slv_reg3(7 downto 0);
-	REG4 <= slv_reg4(7 downto 0);
-	REG5 <= slv_reg5(7 downto 0);
-	REG6 <= slv_reg6(7 downto 0);
-	REG7 <= slv_reg7(7 downto 0);
-	REG8 <= slv_reg8(7 downto 0);
+	process(S_AXI_ACLK) is
+		begin
+	    REG0 <= slv_reg0(7 downto 0);
+	    REG1 <= slv_reg1(7 downto 0);
+	    REG2 <= slv_reg2(7 downto 0);
+	    REG3 <= slv_reg3(7 downto 0);
+	    REG4 <= slv_reg4(7 downto 0);
+	    REG5 <= slv_reg5(7 downto 0);
+	    REG6 <= slv_reg6(7 downto 0);
+	    REG7 <= slv_reg7(7 downto 0);
+	    REG8 <= slv_reg8(7 downto 0);
+	end process;
 	-- User logic ends
 
 end arch_imp;

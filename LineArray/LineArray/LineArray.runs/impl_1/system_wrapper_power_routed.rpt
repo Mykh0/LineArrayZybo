@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date             : Mon Jan 28 16:54:03 2019
+| Date             : Tue Jan 29 18:28:40 2019
 | Host             : Mykho_Laptop running 64-bit major release  (build 9200)
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 1.962  |
-| Dynamic (W)              | 1.822  |
+| Total On-Chip Power (W)  | 1.979  |
+| Dynamic (W)              | 1.839  |
 | Device Static (W)        | 0.140  |
 | Effective TJA (C/W)      | 11.5   |
-| Max Ambient (C)          | 62.4   |
-| Junction Temperature (C) | 47.6   |
+| Max Ambient (C)          | 62.2   |
+| Junction Temperature (C) | 47.8   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -49,24 +49,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.021 |        6 |       --- |             --- |
-| Slice Logic              |     0.008 |     7963 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     2305 |     17600 |           13.10 |
+| Clocks                   |     0.020 |        6 |       --- |             --- |
+| Slice Logic              |     0.009 |     7851 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     2325 |     17600 |           13.21 |
 |   CARRY4                 |     0.001 |      308 |      4400 |            7.00 |
-|   Register               |    <0.001 |     3225 |     35200 |            9.16 |
-|   LUT as Shift Register  |    <0.001 |      215 |      6000 |            3.58 |
-|   Others                 |     0.000 |      511 |       --- |             --- |
+|   Register               |    <0.001 |     3144 |     35200 |            8.93 |
+|   LUT as Shift Register  |    <0.001 |      197 |      6000 |            3.28 |
+|   Others                 |     0.000 |      457 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |      704 |      6000 |           11.73 |
 |   F7/F8 Muxes            |     0.000 |       32 |     17600 |            0.18 |
-| Signals                  |     0.020 |     5898 |       --- |             --- |
-| Block RAM                |     0.044 |       14 |        60 |           23.33 |
+| Signals                  |     0.023 |     5793 |       --- |             --- |
+| Block RAM                |     0.059 |      9.5 |        60 |           15.83 |
 | MMCM                     |     0.106 |        1 |         2 |           50.00 |
 | DSPs                     |     0.021 |       18 |        80 |           22.50 |
 | I/O                      |     0.042 |       12 |       100 |           12.00 |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | PS7                      |     1.556 |        1 |       --- |             --- |
 | Static Power             |     0.140 |          |           |                 |
-| Total                    |     1.962 |          |           |                 |
+| Total                    |     1.979 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.121 |       0.112 |      0.009 |
+| Vccint    |       1.000 |     0.137 |       0.128 |      0.009 |
 | Vccaux    |       1.800 |     0.072 |       0.060 |      0.012 |
 | Vcco33    |       3.300 |     0.013 |       0.012 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -85,11 +85,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.005 |       0.003 |      0.001 |
+| Vccbram   |       1.000 |     0.005 |       0.004 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.737 |       0.703 |      0.033 |
+| Vccpint   |       1.000 |     0.737 |       0.703 |      0.034 |
 | Vccpaux   |       1.800 |     0.085 |       0.074 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.458 |       0.456 |      0.002 |
@@ -155,8 +155,8 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                                | Power (W) |
 +-----------------------------------------------------------------------------------------------------+-----------+
-| system_wrapper                                                                                      |     1.822 |
-|   system_i                                                                                          |     1.780 |
+| system_wrapper                                                                                      |     1.839 |
+|   system_i                                                                                          |     1.798 |
 |     DelayUnit_0                                                                                     |     0.016 |
 |       U0                                                                                            |     0.016 |
 |         stream1_samples_reg_0_63_0_2                                                                |    <0.001 |
@@ -379,18 +379,17 @@ Table of Contents
 |       U0                                                                                            |    <0.001 |
 |     clk_wiz_0                                                                                       |     0.107 |
 |       inst                                                                                          |     0.107 |
-|     fir_compiler_0                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_0                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
@@ -400,18 +399,17 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_1                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_1                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
@@ -421,18 +419,17 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_2                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_2                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
@@ -442,60 +439,17 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_3                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_3                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
-|               g_individual.i_mem_a                                                                  |     0.002 |
-|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
-|               i_addsub_mult_accum                                                                   |     0.002 |
-|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
-|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
-|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
-|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
-|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_4                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
-|               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
-|               g_individual.i_mem_a                                                                  |     0.002 |
-|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
-|               i_addsub_mult_accum                                                                   |     0.002 |
-|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
-|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
-|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
-|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
-|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_5                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
-|               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
@@ -505,18 +459,37 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_6                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_4                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_5                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
@@ -526,18 +499,37 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_7                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_6                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_7                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
@@ -547,18 +539,17 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     fir_compiler_8                                                                                  |     0.009 |
-|       U0                                                                                            |     0.009 |
-|         i_synth                                                                                     |     0.009 |
-|           g_single_rate.i_single_rate                                                               |     0.009 |
+|     fir_compiler_8                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
 |             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
 |               g_buff.i_buff                                                                         |    <0.001 |
-|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.003 |
-|               g_individual.g_mem_b.i_mem_b                                                          |     0.001 |
-|               g_individual.i_mem_a                                                                  |     0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
 |             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
 |               g_individual.i_mem_a                                                                  |     0.002 |
 |             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
@@ -568,8 +559,8 @@ Table of Contents
 |             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
 |             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
 |             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
-|     processing_system7_0                                                                            |     1.557 |
-|       inst                                                                                          |     1.557 |
+|     processing_system7_0                                                                            |     1.558 |
+|       inst                                                                                          |     1.558 |
 |     ps7_0_axi_periph                                                                                |     0.004 |
 |       s00_couplers                                                                                  |     0.004 |
 |         auto_pc                                                                                     |     0.004 |
@@ -583,7 +574,7 @@ Table of Contents
 |               RD.r_channel_0                                                                        |    <0.001 |
 |                 rd_data_fifo_0                                                                      |    <0.001 |
 |                 transaction_fifo_0                                                                  |    <0.001 |
-|               SI_REG                                                                                |     0.002 |
+|               SI_REG                                                                                |     0.001 |
 |                 ar_pipe                                                                             |    <0.001 |
 |                 aw_pipe                                                                             |    <0.001 |
 |                 b_pipe                                                                              |    <0.001 |

@@ -538,36 +538,6 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 21 10:53:31 UTC 2019</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>9b546653</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>boundaryCRCversion</spirit:name>
-            <spirit:value>1</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>c45db289</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>customizationCRCversion</spirit:name>
-            <spirit:value>6</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_vhdlsynthesis</spirit:name>
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
@@ -596,7 +566,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>c45db289</spirit:value>
+            <spirit:value>228c7a60</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -614,7 +584,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 21 10:53:15 UTC 2019</spirit:value>
+            <spirit:value>Tue Jan 29 17:19:50 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -626,7 +596,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>c45db289</spirit:value>
+            <spirit:value>228c7a60</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -645,7 +615,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 21 10:53:15 UTC 2019</spirit:value>
+            <spirit:value>Tue Jan 29 17:19:50 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -657,7 +627,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>c45db289</spirit:value>
+            <spirit:value>228c7a60</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -694,7 +664,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a1ffc693</spirit:value>
+            <spirit:value>2a70de14</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -713,7 +683,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jan 21 10:53:15 UTC 2019</spirit:value>
+            <spirit:value>Tue Jan 29 17:19:50 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -725,7 +695,37 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>a1ffc693</spirit:value>
+            <spirit:value>2a70de14</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRCversion</spirit:name>
+            <spirit:value>6</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Tue Jan 29 17:21:52 UTC 2019</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>boundaryCRC</spirit:name>
+            <spirit:value>9b546653</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>boundaryCRCversion</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>customizationCRC</spirit:name>
+            <spirit:value>228c7a60</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -1378,7 +1378,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_COEF_FILE_LINES</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_COEF_FILE_LINES">750</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_COEF_FILE_LINES">242</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_FILTER_TYPE</spirit:name>
@@ -1406,7 +1406,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_TAPS</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TAPS">1499</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TAPS">483</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_CHANNELS</spirit:name>
@@ -1490,7 +1490,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_ACCUM_PATH_WIDTHS</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ACCUM_PATH_WIDTHS">33</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ACCUM_PATH_WIDTHS">31</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OUTPUT_WIDTH</spirit:name>
@@ -1502,7 +1502,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_ACCUM_OP_PATH_WIDTHS</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ACCUM_OP_PATH_WIDTHS">33</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ACCUM_OP_PATH_WIDTHS">31</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_EXT_MULT_CNFG</spirit:name>
@@ -1526,7 +1526,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OVERSAMPLING_RATE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OVERSAMPLING_RATE">750</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_OVERSAMPLING_RATE">242</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_INPUT_RATE</spirit:name>
@@ -1562,7 +1562,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DATA_MEM_PACKING</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_MEM_PACKING">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_DATA_MEM_PACKING">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_COEF_MEM_PACKING</spirit:name>
@@ -1574,7 +1574,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_LATENCY</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">758</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">250</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_ARESETn</spirit:name>
@@ -1713,6 +1713,12 @@
       <spirit:enumeration spirit:text="Other">Other</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_pairs_33abc840</spirit:name>
+      <spirit:enumeration spirit:text="Quantize Only">Quantize_Only</spirit:enumeration>
+      <spirit:enumeration spirit:text="Maximize Dynamic Range">Maximize_Dynamic_Range</spirit:enumeration>
+      <spirit:enumeration spirit:text="Normalize to Centre Coefficient">Normalize_to_Centre_Coefficient</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_pairs_3ab545a3</spirit:name>
       <spirit:enumeration spirit:text="Not Required">Not_Required</spirit:enumeration>
       <spirit:enumeration spirit:text="Chan ID Field">Chan_ID_Field</spirit:enumeration>
@@ -1727,13 +1733,6 @@
       <spirit:enumeration spirit:text="Inferred">Inferred</spirit:enumeration>
       <spirit:enumeration spirit:text="Non Symmetric">Non_Symmetric</spirit:enumeration>
       <spirit:enumeration spirit:text="Symmetric">Symmetric</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_pairs_6748615b</spirit:name>
-      <spirit:enumeration spirit:text="Integer Coefficients">Integer_Coefficients</spirit:enumeration>
-      <spirit:enumeration spirit:text="Quantize Only">Quantize_Only</spirit:enumeration>
-      <spirit:enumeration spirit:text="Maximize Dynamic Range">Maximize_Dynamic_Range</spirit:enumeration>
-      <spirit:enumeration spirit:text="Normalize to Centre Coefficient">Normalize_to_Centre_Coefficient</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_74144f21</spirit:name>
@@ -1774,42 +1773,6 @@
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
-    <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>system_fir_compiler_6_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>system_fir_compiler_6_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>system_fir_compiler_6_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>system_fir_compiler_6_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>system_fir_compiler_6_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_xbip_utils_3_0__ref_view_fileset</spirit:name>
       <spirit:file>
@@ -1933,6 +1896,42 @@
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>system_fir_compiler_6_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>system_fir_compiler_6_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>system_fir_compiler_6_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>system_fir_compiler_6_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>system_fir_compiler_6_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
   <spirit:description>The Xilinx FIR Compiler LogiCORE is a module for generation of high speed, compact filter implementations that can be configured to implement many different filtering functions. The core is fully synchronous, using a single clock, and is highly parameterizable, allowing designers to control the filter type, data and coefficient widths, the number of filter taps, the number of channels, etc. Multi-rate operation is supported. The core is delivered through the Xilinx Vivado IP Catalog and integrates seamlessly with the Xilinx design flow.</spirit:description>
   <spirit:parameters>
@@ -1950,7 +1949,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CoefficientVector</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CoefficientVector" spirit:order="4">165 8 8 8 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10 10 10 9 9 9 9 9 8 8 8 8 7 7 7 7 6 6 6 5 5 4 4 4 3 3 2 2 2 1 1 0 0 -1 -1 -2 -2 -3 -3 -3 -4 -5 -5 -6 -6 -7 -7 -8 -8 -9 -9 -10 -10 -11 -11 -11 -12 -12 -13 -13 -14 -14 -15 -15 -15 -16 -16 -17 -17 -17 -18 -18 -18 -19 -19 -19 -19 -20 -20 -20 -20 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -20 -20 -20 -20 -20 -19 -19 -19 -18 -18 -18 -17 -17 -17 -16 -16 -16 -15 -15 -14 -14 -13 -13 -12 -12 -11 -11 -10 -10 -9 -9 -8 -8 -7 -7 -6 -5 -5 -4 -4 -3 -3 -2 -2 -1 -1 0 0 1 1 2 2 3 3 4 4 4 5 5 6 6 6 6 7 7 7 8 8 8 8 8 8 9 9 9 9 9 9 9 9 9 9 9 9 9 8 8 8 8 8 8 7 7 7 6 6 6 5 5 5 4 4 3 3 2 2 2 1 1 0 0 -1 -2 -2 -3 -3 -4 -4 -5 -5 -6 -6 -7 -8 -8 -9 -9 -10 -10 -11 -11 -12 -12 -13 -13 -14 -14 -15 -15 -15 -16 -16 -17 -17 -17 -18 -18 -18 -18 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -18 -18 -18 -18 -17 -17 -17 -16 -16 -15 -15 -15 -14 -14 -13 -12 -12 -11 -11 -10 -9 -9 -8 -8 -7 -6 -5 -5 -4 -3 -3 -2 -1 0 0 1 2 3 4 4 5 6 6 7 8 9 9 10 11 11 12 13 13 14 14 15 16 16 17 17 17 18 18 19 19 19 20 20 20 20 20 21 21 21 21 21 21 21 21 21 20 20 20 20 20 19 19 19 18 18 17 17 16 16 15 14 14 13 12 12 11 10 9 9 8 7 6 5 4 3 3 2 1 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15 -16 -17 -17 -18 -19 -20 -21 -22 -22 -23 -24 -25 -25 -26 -26 -27 -27 -28 -28 -29 -29 -30 -30 -30 -30 -31 -31 -31 -31 -31 -31 -31 -31 -30 -30 -30 -30 -29 -29 -29 -28 -28 -27 -26 -26 -25 -24 -24 -23 -22 -21 -20 -19 -18 -17 -16 -15 -14 -13 -11 -10 -9 -8 -6 -5 -4 -3 -1 0 2 3 4 6 7 9 10 11 13 14 15 17 18 20 21 22 24 25 26 27 28 30 31 32 33 34 35 36 37 38 38 39 40 40 41 42 42 43 43 43 44 44 44 44 44 44 44 44 43 43 43 42 42 41 40 40 39 38 37 36 35 34 33 32 30 29 28 26 25 23 21 20 18 16 14 12 11 9 7 5 3 0 -2 -4 -6 -8 -10 -13 -15 -17 -19 -21 -24 -26 -28 -30 -33 -35 -37 -39 -41 -43 -45 -47 -49 -51 -53 -55 -57 -59 -60 -62 -64 -65 -66 -68 -69 -70 -71 -72 -73 -74 -75 -76 -76 -77 -77 -77 -77 -77 -77 -77 -77 -76 -76 -75 -74 -73 -72 -71 -70 -68 -67 -65 -63 -61 -59 -57 -55 -52 -50 -47 -44 -41 -38 -35 -32 -28 -25 -21 -17 -13 -9 -5 -1 3 8 12 17 22 27 32 37 42 47 52 57 63 68 74 79 85 91 97 102 108 114 120 126 132 138 144 150 155 161 167 173 179 185 191 197 203 208 214 220 225 231 236 242 247 252 258 263 268 273 277 282 287 291 296 300 304 308 312 316 319 323 326 329 332 335 338 341 343 345 348 350 351 353 354 356 357 358 359 359 360 360 360 360 360 359 359 358 357 356 354 353 351 350 348 345 343 341 338 335 332 329 326 323 319 316 312 308 304 300 296 291 287 282 277 273 268 263 258 252 247 242 236 231 225 220 214 208 203 197 191 185 179 173 167 161 155 150 144 138 132 126 120 114 108 102 97 91 85 79 74 68 63 57 52 47 42 37 32 27 22 17 12 8 3 -1 -5 -9 -13 -17 -21 -25 -28 -32 -35 -38 -41 -44 -47 -50 -52 -55 -57 -59 -61 -63 -65 -67 -68 -70 -71 -72 -73 -74 -75 -76 -76 -77 -77 -77 -77 -77 -77 -77 -77 -76 -76 -75 -74 -73 -72 -71 -70 -69 -68 -66 -65 -64 -62 -60 -59 -57 -55 -53 -51 -49 -47 -45 -43 -41 -39 -37 -35 -33 -30 -28 -26 -24 -21 -19 -17 -15 -13 -10 -8 -6 -4 -2 0 3 5 7 9 11 12 14 16 18 20 21 23 25 26 28 29 30 32 33 34 35 36 37 38 39 40 40 41 42 42 43 43 43 44 44 44 44 44 44 44 44 43 43 43 42 42 41 40 40 39 38 38 37 36 35 34 33 32 31 30 28 27 26 25 24 22 21 20 18 17 15 14 13 11 10 9 7 6 4 3 2 0 -1 -3 -4 -5 -6 -8 -9 -10 -11 -13 -14 -15 -16 -17 -18 -19 -20 -21 -22 -23 -24 -24 -25 -26 -26 -27 -28 -28 -29 -29 -29 -30 -30 -30 -30 -31 -31 -31 -31 -31 -31 -31 -31 -30 -30 -30 -30 -29 -29 -28 -28 -27 -27 -26 -26 -25 -25 -24 -23 -22 -22 -21 -20 -19 -18 -17 -17 -16 -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 3 4 5 6 7 8 9 9 10 11 12 12 13 14 14 15 16 16 17 17 18 18 19 19 19 20 20 20 20 20 21 21 21 21 21 21 21 21 21 20 20 20 20 20 19 19 19 18 18 17 17 17 16 16 15 14 14 13 13 12 11 11 10 9 9 8 7 6 6 5 4 4 3 2 1 0 0 -1 -2 -3 -3 -4 -5 -5 -6 -7 -8 -8 -9 -9 -10 -11 -11 -12 -12 -13 -14 -14 -15 -15 -15 -16 -16 -17 -17 -17 -18 -18 -18 -18 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -19 -18 -18 -18 -18 -17 -17 -17 -16 -16 -15 -15 -15 -14 -14 -13 -13 -12 -12 -11 -11 -10 -10 -9 -9 -8 -8 -7 -6 -6 -5 -5 -4 -4 -3 -3 -2 -2 -1 0 0 1 1 2 2 2 3 3 4 4 5 5 5 6 6 6 7 7 7 8 8 8 8 8 8 9 9 9 9 9 9 9 9 9 9 9 9 9 8 8 8 8 8 8 7 7 7 6 6 6 6 5 5 4 4 4 3 3 2 2 1 1 0 0 -1 -1 -2 -2 -3 -3 -4 -4 -5 -5 -6 -7 -7 -8 -8 -9 -9 -10 -10 -11 -11 -12 -12 -13 -13 -14 -14 -15 -15 -16 -16 -16 -17 -17 -17 -18 -18 -18 -19 -19 -19 -20 -20 -20 -20 -20 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -21 -20 -20 -20 -20 -19 -19 -19 -19 -18 -18 -18 -17 -17 -17 -16 -16 -15 -15 -15 -14 -14 -13 -13 -12 -12 -11 -11 -11 -10 -10 -9 -9 -8 -8 -7 -7 -6 -6 -5 -5 -4 -3 -3 -3 -2 -2 -1 -1 0 0 1 1 2 2 2 3 3 4 4 4 5 5 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10 10 10 10 9 9 9 9 9 9 8 8 8 165</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CoefficientVector" spirit:order="4">-0.000019041352741156416 0.0000029301914172371256 -3.6768483344507386e-7 -0.000003836551719568998 0.0000089002153275909 -0.000013674289108198891 0.00001687867604394857 -0.000017414023842576747 0.000014676634210476724 -0.000008795358390444727 7.128819105705863e-7 0.000007935685536875149 -0.000015143911555678856 0.000018994233996533387 -0.000018159172550968502 0.000012320896878708027 -0.000002381896379509973 -0.00000961278827549694 0.00002085069067935666 -0.000028375067438131785 0.00002982488349525296 -0.00002409549462988192 0.000011775667406554418 0.000004815964472440209 -0.000022017142099311243 0.000035602648801606694 -0.00004178881667839474 0.00003823817140914734 -0.000024804300939030065 0.0000038009191332509773 0.000020324054683538727 -0.00004188484963479359 0.00005526003825210053 -0.00005630910283599139 0.00004355618163140338 -0.00001882106383873046 -0.000012916540292147349 0.00004446020068207575 -0.00006798358521103809 0.00007692330651883338 -0.00006773262611607378 0.00004103870839226485 -0.0000018657423637850393 -0.00004122346939754801 0.00007794070152751594 -0.00009867798645794731 0.00009695074600652638 -0.0000712740123096432 0.00002595377645999454 0.00002949238856375895 -0.00008226028436258929 0.00011915525272199847 -0.00012982426630453567 0.00010954353145808946 -0.00006083592716046003 -0.000006577921938697168 0.00007761369495879302 -0.00013512636399127574 0.00016397831140467593 -0.00015492303020613014 0.00010732822916677011 -0.000029977455998076163 -0.000060389702304865136 0.00014260943181627756 -0.00019597233057583395 0.00020534581566300345 -0.0001652924648154562 0.00008209811231394558 0.000026943107875943244 -0.00013699642264337886 0.0002212563919353774 -0.0002573785668981639 0.0002332664572832073 -0.00015072856067744784 0.00002597552537061006 0.00011338200778125975 -0.00023433460933799656 0.00030619328717149287 -0.0003082472952060473 0.00023547945676466372 -0.00010080610094428376 -0.00006693052334588403 0.00022899293911600365 -0.0003455829437492202 0.0003854916247275692 -0.00033425274515994086 0.00019870910604078955 -0.000006658430774636147 -0.00019865526948053224 0.00036812077411889306 -0.00045842886639016017 0.00044290006258003705 -0.00031904194597501376 0.00011055520030152633 0.00013690183445902196 -0.0003655284207684386 0.0005187460956651649 -0.0005550450411802359 0.00045894329190607983 -0.00024623122381175046 -0.00003809196545489699 0.00032910643855402823 -0.0005566358186483607 0.0006620092212486477 -0.0006129490878703415 0.000412866742113862 -0.00010199446400902006 -0.00025038361038967014 0.0005611766143858198 -0.000752886866353166 0.0007727448729063266 -0.0006068037274486477 0.000285402152189655 0.00012186420381940452 -0.0005209502675615812 0.0008148830648118401 -0.000927111401184166 0.0008211132778651532 -0.0005113083051929379 0.00006217994826840372 0.00042478615163802166 -0.0008337961224003981 0.0010620594062415226 -0.0010453293884840442 0.0007753879505194565 -0.0003048332203720656 -0.00026261871449624515 0.0007946914764836736 -0.0011611358169578943 0.001265327944517681 -0.0010692865771081712 0.0006057168928571574 0.000026454030352946215 -0.0006827811996767003 0.0012060110963551744 -0.001463465580379262 0.0013802783639488365 -0.0009602480456305384 0.0002886719666866497 0.0004843764460821107 -0.0011772163823039593 0.0016189314187674752 -0.0016911405391928495 0.0013590476420805226 -0.0006837659311763557 -0.0001879366403568961 0.001055048470092471 -0.0017082830453966236 0.0019801847790092454 -0.00178746835249378 0.0011550154624745768 -0.00021488679690375242 -0.0008205604635378981 0.0017061639938962749 -0.0022215477806558125 0.0022253920315775558 -0.0016931423818874328 0.0007283117327795006 0.00045656720809545976 -0.0015861312278179077 0.0023856422122774156 -0.0026472043694480796 0.002282928601030838 -0.0013516370243227976 0.00005146471444394643 0.0013214224397132847 -0.002439616082358894 0.0030218574914216236 -0.002902896014769223 0.002078661821290235 -0.0007147483828981013 -0.0008855344708581879 0.002347723236253159 -0.003312984703577437 0.0035252018947944533 -0.0028974501488159957 0.001540921273714806 0.00025240314181401604 -0.0020713711716555602 0.003478833760551589 -0.004115557011655544 0.003790381411309153 -0.0025343796397941333 0.0006042660364119146 0.0015682223012447494 -0.003471446694985796 0.0046328698858826315 -0.004734607870994604 0.0036976715952429674 -0.0017131556686796991 -0.0007897654369456328 0.00323458754818787 -0.005028264031319931 0.005702795480762143 -0.005034312827249552 0.003110036006499024 -0.000324401561407994 -0.002698546280621569 0.005242307521669369 -0.006664316925323021 0.006554634985456841 -0.004847773456292042 0.00185889288891883 0.001768812358652028 -0.005198174297073603 0.007586561313611442 -0.00828738248289196 0.0070176106157153785 -0.003949538006207436 -0.00029973359509665945 0.004785183827492607 -0.00843656194118727 0.010304886403581508 -0.009797818712967612 0.006847933216103021 -0.001969729285972992 -0.00381599402551681 0.009182645210259754 -0.012786220998971368 0.013581726659228514 -0.011097099530066386 0.005598466976258024 0.0018998658268226426 -0.009796117828864628 0.016211116133106475 -0.019391983704541534 0.018129046529705935 -0.012096747430613189 0.002039067855966391 0.010252823544402932 -0.022183134769247614 0.030781921979053262 -0.0332506388488356 0.02752223341332959 -0.012726642971133252 -0.010534473584759027 0.04016715744605928 -0.07283552166567399 0.10444838811776436 -0.13080126193355354 0.14826105101766904 0.8356296512233774 0.14826105101766904 -0.13080126193355354 0.10444838811776436 -0.07283552166567399 0.04016715744605928 -0.010534473584759027 -0.012726642971133252 0.02752223341332959 -0.0332506388488356 0.030781921979053262 -0.022183134769247614 0.010252823544402932 0.002039067855966391 -0.012096747430613189 0.018129046529705935 -0.019391983704541534 0.016211116133106475 -0.009796117828864628 0.0018998658268226426 0.005598466976258024 -0.011097099530066386 0.013581726659228514 -0.012786220998971368 0.009182645210259754 -0.00381599402551681 -0.001969729285972992 0.006847933216103021 -0.009797818712967612 0.010304886403581508 -0.00843656194118727 0.004785183827492607 -0.00029973359509665945 -0.003949538006207436 0.0070176106157153785 -0.00828738248289196 0.007586561313611442 -0.005198174297073603 0.001768812358652028 0.00185889288891883 -0.004847773456292042 0.006554634985456841 -0.006664316925323021 0.005242307521669369 -0.002698546280621569 -0.000324401561407994 0.003110036006499024 -0.005034312827249552 0.005702795480762143 -0.005028264031319931 0.00323458754818787 -0.0007897654369456328 -0.0017131556686796991 0.0036976715952429674 -0.004734607870994604 0.0046328698858826315 -0.003471446694985796 0.0015682223012447494 0.0006042660364119146 -0.0025343796397941333 0.003790381411309153 -0.004115557011655544 0.003478833760551589 -0.0020713711716555602 0.00025240314181401604 0.001540921273714806 -0.0028974501488159957 0.0035252018947944533 -0.003312984703577437 0.002347723236253159 -0.0008855344708581879 -0.0007147483828981013 0.002078661821290235 -0.002902896014769223 0.0030218574914216236 -0.002439616082358894 0.0013214224397132847 0.00005146471444394643 -0.0013516370243227976 0.002282928601030838 -0.0026472043694480796 0.0023856422122774156 -0.0015861312278179077 0.00045656720809545976 0.0007283117327795006 -0.0016931423818874328 0.0022253920315775558 -0.0022215477806558125 0.0017061639938962749 -0.0008205604635378981 -0.00021488679690375242 0.0011550154624745768 -0.00178746835249378 0.0019801847790092454 -0.0017082830453966236 0.001055048470092471 -0.0001879366403568961 -0.0006837659311763557 0.0013590476420805226 -0.0016911405391928495 0.0016189314187674752 -0.0011772163823039593 0.0004843764460821107 0.0002886719666866497 -0.0009602480456305384 0.0013802783639488365 -0.001463465580379262 0.0012060110963551744 -0.0006827811996767003 0.000026454030352946215 0.0006057168928571574 -0.0010692865771081712 0.001265327944517681 -0.0011611358169578943 0.0007946914764836736 -0.00026261871449624515 -0.0003048332203720656 0.0007753879505194565 -0.0010453293884840442 0.0010620594062415226 -0.0008337961224003981 0.00042478615163802166 0.00006217994826840372 -0.0005113083051929379 0.0008211132778651532 -0.000927111401184166 0.0008148830648118401 -0.0005209502675615812 0.00012186420381940452 0.000285402152189655 -0.0006068037274486477 0.0007727448729063266 -0.000752886866353166 0.0005611766143858198 -0.00025038361038967014 -0.00010199446400902006 0.000412866742113862 -0.0006129490878703415 0.0006620092212486477 -0.0005566358186483607 0.00032910643855402823 -0.00003809196545489699 -0.00024623122381175046 0.00045894329190607983 -0.0005550450411802359 0.0005187460956651649 -0.0003655284207684386 0.00013690183445902196 0.00011055520030152633 -0.00031904194597501376 0.00044290006258003705 -0.00045842886639016017 0.00036812077411889306 -0.00019865526948053224 -0.000006658430774636147 0.00019870910604078955 -0.00033425274515994086 0.0003854916247275692 -0.0003455829437492202 0.00022899293911600365 -0.00006693052334588403 -0.00010080610094428376 0.00023547945676466372 -0.0003082472952060473 0.00030619328717149287 -0.00023433460933799656 0.00011338200778125975 0.00002597552537061006 -0.00015072856067744784 0.0002332664572832073 -0.0002573785668981639 0.0002212563919353774 -0.00013699642264337886 0.000026943107875943244 0.00008209811231394558 -0.0001652924648154562 0.00020534581566300345 -0.00019597233057583395 0.00014260943181627756 -0.000060389702304865136 -0.000029977455998076163 0.00010732822916677011 -0.00015492303020613014 0.00016397831140467593 -0.00013512636399127574 0.00007761369495879302 -0.000006577921938697168 -0.00006083592716046003 0.00010954353145808946 -0.00012982426630453567 0.00011915525272199847 -0.00008226028436258929 0.00002949238856375895 0.00002595377645999454 -0.0000712740123096432 0.00009695074600652638 -0.00009867798645794731 0.00007794070152751594 -0.00004122346939754801 -0.0000018657423637850393 0.00004103870839226485 -0.00006773262611607378 0.00007692330651883338 -0.00006798358521103809 0.00004446020068207575 -0.000012916540292147349 -0.00001882106383873046 0.00004355618163140338 -0.00005630910283599139 0.00005526003825210053 -0.00004188484963479359 0.000020324054683538727 0.0000038009191332509773 -0.000024804300939030065 0.00003823817140914734 -0.00004178881667839474 0.000035602648801606694 -0.000022017142099311243 0.000004815964472440209 0.000011775667406554418 -0.00002409549462988192 0.00002982488349525296 -0.000028375067438131785 0.00002085069067935666 -0.00000961278827549694 -0.000002381896379509973 0.000012320896878708027 -0.000018159172550968502 0.000018994233996533387 -0.000015143911555678856 0.000007935685536875149 7.128819105705863e-7 -0.000008795358390444727 0.000014676634210476724 -0.000017414023842576747 0.00001687867604394857 -0.000013674289108198891 0.0000089002153275909 -0.000003836551719568998 -3.6768483344507386e-7 0.0000029301914172371256 -0.000019041352741156416</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Coefficient_File</spirit:name>
@@ -2030,11 +2029,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Quantization</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Quantization" spirit:choiceRef="choice_pairs_6748615b" spirit:order="24">Integer_Coefficients</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Quantization" spirit:choiceRef="choice_pairs_33abc840" spirit:order="24">Quantize_Only</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Coefficient_Width</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Coefficient_Width" spirit:order="25" spirit:minimum="10" spirit:maximum="49" spirit:rangeType="long">13</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Coefficient_Width" spirit:order="25" spirit:minimum="2" spirit:maximum="49" spirit:rangeType="long">13</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BestPrecision</spirit:name>
@@ -2042,7 +2041,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Coefficient_Fractional_Bits</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Coefficient_Fractional_Bits" spirit:order="27" spirit:minimum="0" spirit:maximum="0" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Coefficient_Fractional_Bits" spirit:order="27" spirit:minimum="0" spirit:maximum="12" spirit:rangeType="long">12</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Coefficient_Structure</spirit:name>
@@ -2066,7 +2065,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Output_Width</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Output_Width" spirit:order="33" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Output_Width" spirit:order="33" spirit:minimum="1" spirit:maximum="30" spirit:rangeType="long">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Filter_Architecture</spirit:name>

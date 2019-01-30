@@ -13,7 +13,8 @@
 
 #define MAP_SIZE 4096UL
 #define MAP_MASK (MAP_SIZE -1)
-#define GAIN_BASE_ADDR 0x64300000
+#define EQ_BASE_ADDR 0x74300000
+#define SPEAKER_BASE_ADDR 0x64300000
 #define BEAM_BASE_ADDR 0X54300000
 #define SPEAKER0_BASE_ADDR 0x76600000
 #define SPEAKER1_BASE_ADDR 0x76610000
@@ -66,10 +67,13 @@ static char * readFile(char* systemPath)
 int main() {
   const int beamCount = 8;
   const int gainCount = 9;
+  const int eqCount = 9;
   int* beam = getVirtualAddress(BEAM_BASE_ADDR);
-  int* gain = getVirtualAddress(GAIN_BASE_ADDR);
+  int* gain = getVirtualAddress(SPEAKER_BASE_ADDR);
+  int* eq= getVirtualAddress(EQ_BASE_ADDR);
   int i = 0;
   int j = 0;
+  int k = 0;
   
 
     for(i = 0; i < beamCount; i++)
@@ -80,14 +84,14 @@ int main() {
       FILE * fp;
       char beamBuffer[10];
 
-      sprintf(stringBuffer, "/home/xillinux/linearray/beam%d.txt", i + 1);
+      sprintf(stringBuffer, "/home/xillinux/linearray/beamconvert/beam%d.txt", i + 1);
       fp = fopen(stringBuffer, "r");
       fread(beamBuffer, 10, 1, fp);
       beamVal = atoi(beamBuffer);
       oldVal = *((unsigned *) (beam + i));
       if(oldVal != beamVal) {
         *((unsigned *) (beam + i)) = beamVal;
-        printf("Value in register %d: %d\n", i, *((unsigned *) (beam + i)));
+        // printf("\x1B[32mBeam %d: %d\n", i, *((unsigned *) (beam + i)));
       }
     }
 
@@ -96,13 +100,40 @@ int main() {
       char filePath[50];
       char gainBuffer[10];
       int gainVal = 0;
+      int oldGain = 0;
       FILE * filePoint;
-      sprintf(filePath, "/home/xillinux/linearray/gain%d.txt", j);
+
+      sprintf(filePath, "/home/xillinux/linearray/gainconvert/gain%d.txt", j);
       filePoint = fopen(filePath, "r");
       fread(gainBuffer, 10, 1, filePoint);
       gainVal = (int)floor((double)655.35 * (float)(atoi(gainBuffer)));
-      *((unsigned *) (gain + j)) = gainVal;
-      printf("Gain %d set to: %d\n", j, gainVal);
+      oldGain = *((unsigned *) (gain + j));
+      if(oldGain != gainVal) {
+        *((unsigned *) (gain + j)) = gainVal;
+        // printf("\x1B[31mGain %d set to: %d\n", j, gainVal);
+      }
     }
+
+    for(k = 0; k < eqCount; k++)
+    {
+      char path[50];
+      char eqBuffer[10];
+      int eqVal = 0;
+      int oldEq = 0;
+      FILE * pointer;
+
+      // printf("Bus: %d", eq + k);
+      sprintf(path, "/home/xillinux/linearray/eqconvert/eq%d.txt", k);
+      pointer = fopen(path, "r");
+      fread(eqBuffer, 10, 1, pointer);
+      eqVal = (int)floor((double)2.55 * (float)(atoi(eqBuffer)));
+      oldEq = *((unsigned *) (eq + k));
+
+      if (eqVal != oldEq) {
+        *((unsigned *) (eq + k)) = eqVal;
+        // printf("\x1B[36mEq %d set to: %d\n", k, eqVal);
+      }
+    }
+    printf("\x1B[37m");
     return 0;
 }

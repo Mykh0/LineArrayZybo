@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15404 
+INFO: Helper process launched with PID 30212 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 303.910 ; gain = 93.348
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 304.648 ; gain = 94.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'system_SpeakerGain_v1_0_0_1' [c:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_SpeakerGain_v1_0_0_1/synth/system_SpeakerGain_v1_0_0_1.vhd:119]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -72,7 +72,7 @@ WARNING: [Synth 8-3331] design SpeakerGain_v1_0_S00_AXI has unconnected port S_A
 WARNING: [Synth 8-3331] design SpeakerGain_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design SpeakerGain_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 342.086 ; gain = 131.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 341.914 ; gain = 131.512
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -82,7 +82,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 342.086 ; gain = 131.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:39 . Memory (MB): peak = 341.914 ; gain = 131.512
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -94,22 +94,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 637.656 ; gain = 0.145
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.833 . Memory (MB): peak = 637.629 ; gain = 0.152
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 637.656 ; gain = 427.094
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:01:33 . Memory (MB): peak = 637.629 ; gain = 427.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 637.656 ; gain = 427.094
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:01:33 . Memory (MB): peak = 637.629 ; gain = 427.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 637.656 ; gain = 427.094
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:01:33 . Memory (MB): peak = 637.629 ; gain = 427.227
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'M_TDATA0_reg' [C:/Users/Mykho/Documents/repos/LineArrayZybo/SpeakerGain/gain.vhd:70]
 WARNING: [Synth 8-327] inferring latch for variable 'M_TDATA1_reg' [C:/Users/Mykho/Documents/repos/LineArrayZybo/SpeakerGain/gain.vhd:76]
@@ -129,7 +129,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'M_TVALID6_reg' [C:/Users/My
 WARNING: [Synth 8-327] inferring latch for variable 'M_TVALID7_reg' [C:/Users/Mykho/Documents/repos/LineArrayZybo/SpeakerGain/gain.vhd:113]
 WARNING: [Synth 8-327] inferring latch for variable 'M_TVALID8_reg' [C:/Users/Mykho/Documents/repos/LineArrayZybo/SpeakerGain/gain.vhd:119]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 637.656 ; gain = 427.094
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:01:34 . Memory (MB): peak = 637.629 ; gain = 427.227
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,7 +219,7 @@ INFO: [Synth 8-3332] Sequential element (U0/SpeakerGain_v1_0_S00_AXI_inst/axi_ar
 INFO: [Synth 8-3332] Sequential element (U0/SpeakerGain_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_SpeakerGain_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (U0/SpeakerGain_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_SpeakerGain_v1_0_0_1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 637.656 ; gain = 427.094
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:36 . Memory (MB): peak = 637.629 ; gain = 427.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -257,10 +257,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 645.367 ; gain = 434.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:56 . Memory (MB): peak = 645.336 ; gain = 434.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 645.367 ; gain = 434.805
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:56 . Memory (MB): peak = 645.336 ; gain = 434.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -272,7 +272,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:56 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -296,7 +296,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -309,7 +309,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,25 +321,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,11 +376,11 @@ Report Instance Areas:
 |4     |    SpeakerGain_v1_0_S00_AXI_inst |SpeakerGain_v1_0_S00_AXI |   474|
 +------+----------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 666.586 ; gain = 145.715
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 666.586 ; gain = 456.023
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 666.555 ; gain = 145.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:57 . Memory (MB): peak = 666.555 ; gain = 456.152
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -393,9 +393,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 40 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 666.586 ; gain = 444.461
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:33 . Memory (MB): peak = 666.555 ; gain = 444.668
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_v1_0_0_1_synth_1/system_SpeakerGain_v1_0_0_1.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Mykho/Documents/repos/LineArrayZybo/LineArray/LineArray/LineArray.runs/system_SpeakerGain_v1_0_0_1_synth_1/system_SpeakerGain_v1_0_0_1.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 666.586 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 28 16:50:32 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.492 . Memory (MB): peak = 666.555 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 29 17:31:32 2019...

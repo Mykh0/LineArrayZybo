@@ -1,11 +1,11 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
--- Date        : Fri Jan 18 13:09:23 2019
--- Host        : Acer running 64-bit major release  (build 9200)
+-- Date        : Tue Jan 29 18:23:32 2019
+-- Host        : Mykho_Laptop running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top system_fir_compiler_1_0 -prefix
---               system_fir_compiler_1_0_ system_fir_compiler_1_0_stub.vhdl
--- Design      : system_fir_compiler_1_0
+--               system_fir_compiler_1_0_ system_fir_compiler_3_0_stub.vhdl
+-- Design      : system_fir_compiler_3_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
