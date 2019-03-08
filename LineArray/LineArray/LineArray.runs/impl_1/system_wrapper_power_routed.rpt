@@ -1,0 +1,614 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date             : Tue Jan 29 18:28:40 2019
+| Host             : Mykho_Laptop running 64-bit major release  (build 9200)
+| Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+| Design           : system_wrapper
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------+
+| Total On-Chip Power (W)  | 1.979  |
+| Dynamic (W)              | 1.839  |
+| Device Static (W)        | 0.140  |
+| Effective TJA (C/W)      | 11.5   |
+| Max Ambient (C)          | 62.2   |
+| Junction Temperature (C) | 47.8   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.020 |        6 |       --- |             --- |
+| Slice Logic              |     0.009 |     7851 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     2325 |     17600 |           13.21 |
+|   CARRY4                 |     0.001 |      308 |      4400 |            7.00 |
+|   Register               |    <0.001 |     3144 |     35200 |            8.93 |
+|   LUT as Shift Register  |    <0.001 |      197 |      6000 |            3.28 |
+|   Others                 |     0.000 |      457 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |      704 |      6000 |           11.73 |
+|   F7/F8 Muxes            |     0.000 |       32 |     17600 |            0.18 |
+| Signals                  |     0.023 |     5793 |       --- |             --- |
+| Block RAM                |     0.059 |      9.5 |        60 |           15.83 |
+| MMCM                     |     0.106 |        1 |         2 |           50.00 |
+| DSPs                     |     0.021 |       18 |        80 |           22.50 |
+| I/O                      |     0.042 |       12 |       100 |           12.00 |
+| XADC                     |     0.004 |        1 |       --- |             --- |
+| PS7                      |     1.556 |        1 |       --- |             --- |
+| Static Power             |     0.140 |          |           |                 |
+| Total                    |     1.979 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.137 |       0.128 |      0.009 |
+| Vccaux    |       1.800 |     0.072 |       0.060 |      0.012 |
+| Vcco33    |       3.300 |     0.013 |       0.012 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.005 |       0.004 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.737 |       0.703 |      0.034 |
+| Vccpaux   |       1.800 |     0.085 |       0.074 |      0.010 |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.458 |       0.456 |      0.002 |
+| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.004 |       0.003 |      0.001 |
+| Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------+-----------------------------------------------------------+-----------------+
+| Clock                       | Domain                                                    | Constraint (ns) |
++-----------------------------+-----------------------------------------------------------+-----------------+
+| clk_fpga_0                  | system_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_in1                     | clk_in1                                                   |             8.0 |
+| clk_out1_system_clk_wiz_0_0 | system_i/clk_wiz_0/inst/clk_out1_system_clk_wiz_0_0       |             5.0 |
+| clkfbout_system_clk_wiz_0_0 | system_i/clk_wiz_0/inst/clkfbout_system_clk_wiz_0_0       |             8.0 |
++-----------------------------+-----------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------------------------------------------------------------------------+-----------+
+| Name                                                                                                | Power (W) |
++-----------------------------------------------------------------------------------------------------+-----------+
+| system_wrapper                                                                                      |     1.839 |
+|   system_i                                                                                          |     1.798 |
+|     DelayUnit_0                                                                                     |     0.016 |
+|       U0                                                                                            |     0.016 |
+|         stream1_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream1_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream1_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream1_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream1_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream1_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream1_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream1_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream1_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream1_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream1_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream1_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream1_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream1_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream1_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream1_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream1_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream1_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream1_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream1_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream1_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream1_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream1_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream1_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream2_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream2_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream2_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream2_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream2_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream2_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream2_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream2_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream2_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream2_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream2_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream2_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream2_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream2_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream2_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream2_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream2_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream2_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream2_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream2_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream2_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream2_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream2_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream2_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream3_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream3_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream3_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream3_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream3_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream3_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream3_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream3_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream3_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream3_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream3_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream3_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream3_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream3_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream3_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream3_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream3_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream3_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream3_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream3_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream3_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream3_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream3_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream3_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream4_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream4_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream4_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream4_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream4_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream4_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream4_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream4_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream4_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream4_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream4_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream4_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream4_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream4_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream4_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream4_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream4_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream4_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream4_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream4_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream4_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream4_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream4_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream4_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream5_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream5_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream5_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream5_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream5_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream5_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream5_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream5_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream5_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream5_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream5_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream5_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream5_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream5_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream5_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream5_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream5_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream5_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream5_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream5_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream5_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream5_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream5_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream5_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream6_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream6_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream6_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream6_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream6_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream6_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream6_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream6_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream6_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream6_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream6_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream6_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream6_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream6_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream6_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream6_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream6_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream6_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream6_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream6_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream6_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream6_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream6_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream6_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream7_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream7_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream7_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream7_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream7_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream7_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream7_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream7_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream7_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream7_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream7_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream7_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream7_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream7_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream7_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream7_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream7_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream7_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream7_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream7_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream7_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream7_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream7_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream7_samples_reg_64_127_9_11                                                             |    <0.001 |
+|         stream8_samples_reg_0_63_0_2                                                                |    <0.001 |
+|         stream8_samples_reg_0_63_12_14                                                              |    <0.001 |
+|         stream8_samples_reg_0_63_15_15                                                              |    <0.001 |
+|         stream8_samples_reg_0_63_3_5                                                                |    <0.001 |
+|         stream8_samples_reg_0_63_6_8                                                                |    <0.001 |
+|         stream8_samples_reg_0_63_9_11                                                               |    <0.001 |
+|         stream8_samples_reg_128_191_0_2                                                             |    <0.001 |
+|         stream8_samples_reg_128_191_12_14                                                           |    <0.001 |
+|         stream8_samples_reg_128_191_15_15                                                           |    <0.001 |
+|         stream8_samples_reg_128_191_3_5                                                             |    <0.001 |
+|         stream8_samples_reg_128_191_6_8                                                             |    <0.001 |
+|         stream8_samples_reg_128_191_9_11                                                            |    <0.001 |
+|         stream8_samples_reg_192_255_0_2                                                             |    <0.001 |
+|         stream8_samples_reg_192_255_12_14                                                           |    <0.001 |
+|         stream8_samples_reg_192_255_15_15                                                           |    <0.001 |
+|         stream8_samples_reg_192_255_3_5                                                             |    <0.001 |
+|         stream8_samples_reg_192_255_6_8                                                             |    <0.001 |
+|         stream8_samples_reg_192_255_9_11                                                            |    <0.001 |
+|         stream8_samples_reg_64_127_0_2                                                              |    <0.001 |
+|         stream8_samples_reg_64_127_12_14                                                            |    <0.001 |
+|         stream8_samples_reg_64_127_15_15                                                            |    <0.001 |
+|         stream8_samples_reg_64_127_3_5                                                              |    <0.001 |
+|         stream8_samples_reg_64_127_6_8                                                              |    <0.001 |
+|         stream8_samples_reg_64_127_9_11                                                             |    <0.001 |
+|     PWM_GENERATOR_0                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_1                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_2                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_3                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_4                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_5                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_6                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_7                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     PWM_GENERATOR_8                                                                                 |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     SpeakerGain_v1_0_0                                                                              |     0.001 |
+|       U0                                                                                            |     0.001 |
+|         Gain_inst                                                                                   |    <0.001 |
+|         SpeakerGain_v1_0_S00_AXI_inst                                                               |     0.001 |
+|     SystemReset_0                                                                                   |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     all_pass_filter_0                                                                               |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|     clk_wiz_0                                                                                       |     0.107 |
+|       inst                                                                                          |     0.107 |
+|     fir_compiler_0                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_1                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
+|               i_addsub_mult_accum                                                                   |     0.002 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_2                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
+|               i_addsub_mult_accum                                                                   |     0.002 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_3                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_4                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_5                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
+|               i_addsub_mult_accum                                                                   |     0.002 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_6                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.003 |
+|               i_addsub_mult_accum                                                                   |     0.003 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_7                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
+|               i_addsub_mult_accum                                                                   |     0.002 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     fir_compiler_8                                                                                  |     0.011 |
+|       U0                                                                                            |     0.011 |
+|         i_synth                                                                                     |     0.011 |
+|           g_single_rate.i_single_rate                                                               |     0.011 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[3].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[7].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_cntrl_signals[9].i_delay                                     |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_data_array.g_madd[0].g_wrap_buff.i_data_wrap_buff |    <0.001 |
+|               g_buff.i_buff                                                                         |    <0.001 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[0].i_mem                                |     0.005 |
+|               g_packed.g_true_dual_port.i_mem                                                       |     0.005 |
+|             g_semi_parallel_and_smac.g_paths[0].g_mem_array[1].i_mem                                |     0.002 |
+|               g_individual.i_mem_a                                                                  |     0.002 |
+|             g_semi_parallel_and_smac.g_paths[0].g_smac.i_maccum                                     |     0.002 |
+|               i_addsub_mult_accum                                                                   |     0.002 |
+|             g_semi_parallel_and_smac.i_accumulate                                                   |    <0.001 |
+|             g_semi_parallel_and_smac.i_cntrl_coef_addr                                              |    <0.001 |
+|             g_semi_parallel_and_smac.i_data_in                                                      |    <0.001 |
+|             g_semi_parallel_and_smac.i_latch_op                                                     |    <0.001 |
+|             g_semi_parallel_and_smac.i_load                                                         |    <0.001 |
+|     processing_system7_0                                                                            |     1.558 |
+|       inst                                                                                          |     1.558 |
+|     ps7_0_axi_periph                                                                                |     0.004 |
+|       s00_couplers                                                                                  |     0.004 |
+|         auto_pc                                                                                     |     0.004 |
+|           inst                                                                                      |     0.004 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                                                    |     0.004 |
+|               RD.ar_channel_0                                                                       |    <0.001 |
+|                 ar_cmd_fsm_0                                                                        |    <0.001 |
+|                 cmd_translator_0                                                                    |    <0.001 |
+|                   incr_cmd_0                                                                        |    <0.001 |
+|                   wrap_cmd_0                                                                        |    <0.001 |
+|               RD.r_channel_0                                                                        |    <0.001 |
+|                 rd_data_fifo_0                                                                      |    <0.001 |
+|                 transaction_fifo_0                                                                  |    <0.001 |
+|               SI_REG                                                                                |     0.001 |
+|                 ar_pipe                                                                             |    <0.001 |
+|                 aw_pipe                                                                             |    <0.001 |
+|                 b_pipe                                                                              |    <0.001 |
+|                 r_pipe                                                                              |    <0.001 |
+|               WR.aw_channel_0                                                                       |    <0.001 |
+|                 aw_cmd_fsm_0                                                                        |    <0.001 |
+|                 cmd_translator_0                                                                    |    <0.001 |
+|                   incr_cmd_0                                                                        |    <0.001 |
+|                   wrap_cmd_0                                                                        |    <0.001 |
+|               WR.b_channel_0                                                                        |    <0.001 |
+|                 bid_fifo_0                                                                          |    <0.001 |
+|                 bresp_fifo_0                                                                        |    <0.001 |
+|       xbar                                                                                          |    <0.001 |
+|         inst                                                                                        |    <0.001 |
+|           gen_sasd.crossbar_sasd_0                                                                  |    <0.001 |
+|             addr_arbiter_inst                                                                       |    <0.001 |
+|             gen_decerr.decerr_slave_inst                                                            |    <0.001 |
+|             reg_slice_r                                                                             |    <0.001 |
+|             splitter_ar                                                                             |    <0.001 |
+|             splitter_aw                                                                             |    <0.001 |
+|     rst_ps7_0_100M                                                                                  |    <0.001 |
+|       U0                                                                                            |    <0.001 |
+|         EXT_LPF                                                                                     |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT                                                                 |    <0.001 |
+|         SEQ                                                                                         |    <0.001 |
+|           SEQ_COUNTER                                                                               |    <0.001 |
+|     translatorV2_v1_0_0                                                                             |     0.001 |
+|       U0                                                                                            |     0.001 |
+|         translatorV2_v1_0_S00_AXI_inst                                                              |     0.001 |
+|     xadc_wiz_0                                                                                      |     0.008 |
+|       U0                                                                                            |     0.008 |
+|         AXI_XADC_CORE_I                                                                             |     0.008 |
+|           drp_to_axi4stream_inst                                                                    |     0.004 |
+|     xlconstant_0                                                                                    |     0.000 |
++-----------------------------------------------------------------------------------------------------+-----------+
+
+

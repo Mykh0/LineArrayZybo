@@ -1,0 +1,148 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port PWM_OUT -pg 1 -y 350 -defaultsOSRD
+preplace port DDR -pg 1 -y 1750 -defaultsOSRD
+preplace port PWM_OUT_1 -pg 1 -y 510 -defaultsOSRD
+preplace port PWM_OUT_2 -pg 1 -y 1470 -defaultsOSRD
+preplace port clk_in1 -pg 1 -y 770 -defaultsOSRD
+preplace port PWM_OUT_3 -pg 1 -y 1630 -defaultsOSRD
+preplace port PWM_OUT_4 -pg 1 -y 670 -defaultsOSRD
+preplace port PWM_OUT_5 -pg 1 -y 830 -defaultsOSRD
+preplace port PWM_OUT_6 -pg 1 -y 990 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 1770 -defaultsOSRD
+preplace port PWM_OUT_7 -pg 1 -y 1150 -defaultsOSRD
+preplace port PWM_OUT_8 -pg 1 -y 1310 -defaultsOSRD
+preplace port Vaux14 -pg 1 -y 710 -defaultsOSRD
+preplace inst PWM_GENERATOR_6 -pg 1 -lvl 8 -y 990 -defaultsOSRD
+preplace inst PWM_GENERATOR_7 -pg 1 -lvl 8 -y 1150 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 6 -y 70 -defaultsOSRD
+preplace inst SpeakerGain_v1_0_0 -pg 1 -lvl 7 -y 890 -defaultsOSRD
+preplace inst all_pass_filter_0 -pg 1 -lvl 4 -y 700 -defaultsOSRD
+preplace inst PWM_GENERATOR_8 -pg 1 -lvl 8 -y 1310 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 6 -y 210 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 2 -y 660 -defaultsOSRD
+preplace inst fir_compiler_2 -pg 1 -lvl 6 -y 350 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 3 -y 710 -defaultsOSRD
+preplace inst fir_compiler_3 -pg 1 -lvl 6 -y 490 -defaultsOSRD
+preplace inst fir_compiler_4 -pg 1 -lvl 6 -y 630 -defaultsOSRD
+preplace inst fir_compiler_5 -pg 1 -lvl 6 -y 790 -defaultsOSRD
+preplace inst PWM_GENERATOR_0 -pg 1 -lvl 8 -y 350 -defaultsOSRD
+preplace inst fir_compiler_6 -pg 1 -lvl 6 -y 930 -defaultsOSRD
+preplace inst PWM_GENERATOR_1 -pg 1 -lvl 8 -y 510 -defaultsOSRD
+preplace inst fir_compiler_7 -pg 1 -lvl 6 -y 1070 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -y 1550 -defaultsOSRD
+preplace inst PWM_GENERATOR_2 -pg 1 -lvl 8 -y 1470 -defaultsOSRD
+preplace inst fir_compiler_8 -pg 1 -lvl 6 -y 1250 -defaultsOSRD
+preplace inst translatorV2_v1_0_0 -pg 1 -lvl 7 -y 1560 -defaultsOSRD
+preplace inst PWM_GENERATOR_3 -pg 1 -lvl 8 -y 1630 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 770 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 5 -y 1630 -defaultsOSRD
+preplace inst PWM_GENERATOR_4 -pg 1 -lvl 8 -y 670 -defaultsOSRD
+preplace inst SystemReset_0 -pg 1 -lvl 2 -y 770 -defaultsOSRD
+preplace inst DelayUnit_0 -pg 1 -lvl 5 -y 830 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 1840 -defaultsOSRD
+preplace inst PWM_GENERATOR_5 -pg 1 -lvl 8 -y 830 -defaultsOSRD
+preplace netloc fir_compiler_2_m_axis_data_tvalid 1 6 1 2050
+preplace netloc fir_compiler_1_m_axis_data_tdata 1 6 1 2110
+preplace netloc PWM_GENERATOR_0_PWM_OUT 1 8 1 NJ
+preplace netloc PWM_GENERATOR_4_PWM_OUT 1 8 1 NJ
+preplace netloc DelayUnit_0_config_ready 1 5 2 1500 1710 2120J
+preplace netloc processing_system7_0_FIXED_IO 1 5 4 NJ 1770 NJ 1770 NJ 1770 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_VALID 1 4 4 1080 1170 NJ 1170 NJ 1170 2600
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 5 2 1570 1720 2110
+preplace netloc fir_compiler_0_m_axis_data_tdata 1 6 1 2120
+preplace netloc fir_compiler_6_m_axis_data_tvalid 1 6 1 1960
+preplace netloc fir_compiler_3_m_axis_data_tdata 1 6 1 2080
+preplace netloc xadc_wiz_0_m_axis_tid 1 3 1 N
+preplace netloc DelayUnit_0_m5_axis_tvalid 1 5 1 1580
+preplace netloc PWM_GENERATOR_7_PWM_OUT 1 8 1 NJ
+preplace netloc DelayUnit_0_m7_axis_tvalid 1 5 1 1570
+preplace netloc SpeakerGain_v1_0_0_m_tvalid0 1 7 1 2590
+preplace netloc DelayUnit_0_m1_axis_tdata 1 5 1 1480
+preplace netloc SpeakerGain_v1_0_0_m_tvalid1 1 7 1 2670
+preplace netloc SpeakerGain_v1_0_0_m_tdata0 1 7 1 2500
+preplace netloc SpeakerGain_v1_0_0_m_tvalid2 1 7 1 2630
+preplace netloc SpeakerGain_v1_0_0_m_tdata1 1 7 1 2580
+preplace netloc DelayUnit_0_m6_axis_tdata 1 5 1 1470
+preplace netloc processing_system7_0_DDR 1 5 4 NJ 1750 NJ 1750 NJ 1750 NJ
+preplace netloc SpeakerGain_v1_0_0_m_tvalid3 1 7 1 2610
+preplace netloc SpeakerGain_v1_0_0_m_tdata2 1 7 1 2690
+preplace netloc fir_compiler_7_m_axis_data_tdata 1 6 1 2000
+preplace netloc SpeakerGain_v1_0_0_m_tvalid4 1 7 1 2710
+preplace netloc SpeakerGain_v1_0_0_m_tdata3 1 7 1 2660
+preplace netloc fir_compiler_5_m_axis_data_tvalid 1 6 1 1970
+preplace netloc fir_compiler_5_m_axis_data_tdata 1 6 1 2020
+preplace netloc SpeakerGain_v1_0_0_m_tvalid5 1 7 1 2740
+preplace netloc SpeakerGain_v1_0_0_m_tdata4 1 7 1 2610
+preplace netloc DelayUnit_0_m5_axis_tdata 1 5 1 1570
+preplace netloc SpeakerGain_v1_0_0_m_tdata5 1 7 1 2680
+preplace netloc SpeakerGain_v1_0_0_m_tvalid6 1 7 1 2750
+preplace netloc fir_compiler_7_m_axis_data_tvalid 1 6 1 2060
+preplace netloc PWM_GENERATOR_2_PWM_OUT 1 8 1 NJ
+preplace netloc SpeakerGain_v1_0_0_m_tvalid7 1 7 1 2640
+preplace netloc SpeakerGain_v1_0_0_m_tdata6 1 7 1 2730
+preplace netloc fir_compiler_2_m_axis_data_tdata 1 6 1 2100
+preplace netloc fir_compiler_1_m_axis_data_tvalid 1 6 1 2070
+preplace netloc ps7_0_axi_periph_M00_AXI 1 6 1 N
+preplace netloc SpeakerGain_v1_0_0_m_tvalid8 1 7 1 2620
+preplace netloc SpeakerGain_v1_0_0_m_tdata7 1 7 1 2720
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 4 2 1080 1540 1460
+preplace netloc SpeakerGain_v1_0_0_m_tdata8 1 7 1 2680
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA0 1 4 4 990 1510 1470J 1730 NJ 1730 2560
+preplace netloc ps7_0_axi_periph_M01_AXI 1 6 1 2030
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA1 1 4 4 1000 1480 1480J 1740 NJ 1740 2550
+preplace netloc DelayUnit_0_m1_axis_tvalid 1 5 1 1490
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA2 1 4 4 1020 1340 NJ 1340 NJ 1340 2510
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA3 1 4 4 1060 1150 NJ 1150 NJ 1150 2590
+preplace netloc fir_compiler_3_m_axis_data_tvalid 1 6 1 2010
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA4 1 4 4 1070 1160 NJ 1160 NJ 1160 2580
+preplace netloc PWM_GENERATOR_8_PWM_OUT 1 8 1 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA5 1 4 4 1030 1360 NJ 1360 NJ 1360 2540
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 5 1 1530
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA6 1 4 4 1040 1370 NJ 1370 NJ 1370 2530
+preplace netloc PWM_GENERATOR_3_PWM_OUT 1 8 1 NJ
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_ENABLE 1 4 4 980 1390 NJ 1390 NJ 1390 2570
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_DATA7 1 4 4 1050 1380 NJ 1380 NJ 1380 2520
+preplace netloc fir_compiler_4_m_axis_data_tdata 1 6 1 2060
+preplace netloc xadc_wiz_0_m_axis_tvalid 1 3 1 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 4 3 1070 1520 1550 1910 2100
+preplace netloc fir_compiler_6_m_axis_data_tdata 1 6 1 1990
+preplace netloc DelayUnit_0_m8_axis_tdata 1 5 1 1560
+preplace netloc fir_compiler_8_m_axis_data_tdata 1 6 1 2040
+preplace netloc fir_compiler_0_m_axis_data_tvalid 1 6 1 2090
+preplace netloc DelayUnit_0_m8_axis_tvalid 1 5 1 1520
+preplace netloc DelayUnit_0_m3_axis_tvalid 1 5 1 1530
+preplace netloc DelayUnit_0_m2_axis_tvalid 1 5 1 1510
+preplace netloc DelayUnit_0_m4_axis_tvalid 1 5 1 1560
+preplace netloc clk_wiz_0_locked 1 1 1 190
+preplace netloc all_pass_filter_0_m_axis 1 4 1 N
+preplace netloc PWM_GENERATOR_1_PWM_OUT 1 8 1 NJ
+preplace netloc xadc_wiz_0_m_axis_tdata 1 3 1 680
+preplace netloc DelayUnit_0_m3_axis_tdata 1 5 1 1520
+preplace netloc SystemReset_0_nrst 1 2 6 370 510 670 510 960 510 1570J 710 1970J 390 2650
+preplace netloc Vaux14_1 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc DelayUnit_0_m0_axis_tvalid 1 5 1 1470
+preplace netloc DelayUnit_0_m0_axis_tdata 1 5 1 1460
+preplace netloc clk_wiz_0_clk_out1 1 1 7 180 1330 380 1330 680 1330 970 1330 1550 1330 2080 1330 2700
+preplace netloc PWM_GENERATOR_5_PWM_OUT 1 8 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 1510
+preplace netloc DelayUnit_0_m6_axis_tvalid 1 5 1 1500
+preplace netloc DelayUnit_0_m4_axis_tdata 1 5 1 1540
+preplace netloc xlconstant_0_dout 1 2 1 380
+preplace netloc PWM_GENERATOR_6_PWM_OUT 1 8 1 NJ
+preplace netloc DelayUnit_0_m2_axis_tdata 1 5 1 1500
+preplace netloc clk_in1_1 1 0 1 NJ
+preplace netloc all_pass_filter_0_s_axis_tready 1 3 1 660
+preplace netloc fir_compiler_4_m_axis_data_tvalid 1 6 1 1980
+preplace netloc fir_compiler_8_m_axis_data_tvalid 1 6 1 2070
+preplace netloc DelayUnit_0_m7_axis_tdata 1 5 1 1580
+preplace netloc translatorV2_v1_0_0_S00_CONFIG_CHANNEL 1 4 4 1010 1350 NJ 1350 NJ 1350 2500
+levelinfo -pg 1 0 100 280 520 820 1270 1770 2310 2900 3070 -top 0 -bot 1980
+",
+}
+{
+   da_axi4_cnt: "6",
+   da_board_cnt: "1",
+   da_ps7_cnt: "1",
+}

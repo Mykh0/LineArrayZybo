@@ -1,0 +1,333 @@
+
+*** Running vivado
+    with args -log system_translatorV2_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_translatorV2_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source system_translatorV2_0_0.tcl -notrace
+Command: synth_design -top system_translatorV2_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10912 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 293.055 ; gain = 83.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_translatorV2_0_0' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_0_0/synth/system_translatorV2_0_0.vhd:94]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'translatorV2_v1_0' declared at 'c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0.vhd:5' bound to instance 'U0' of component 'translatorV2_v1_0' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_0_0/synth/system_translatorV2_0_0.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'translatorV2_v1_0' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0.vhd:60]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'translatorV2_v1_0_S00_AXI' declared at 'c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:5' bound to instance 'translatorV2_v1_0_S00_AXI_inst' of component 'translatorV2_v1_0_S00_AXI' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'translatorV2_v1_0_S00_AXI' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:99]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:248]
+INFO: [Synth 8-226] default block is never used [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:415]
+WARNING: [Synth 8-3848] Net CONFIG_CHANNEL in module/entity translatorV2_v1_0_S00_AXI does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:84]
+WARNING: [Synth 8-3848] Net CONFIG_VALID in module/entity translatorV2_v1_0_S00_AXI does not have driver. [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'translatorV2_v1_0_S00_AXI' (1#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:99]
+INFO: [Synth 8-256] done synthesizing module 'translatorV2_v1_0' (2#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'system_translatorV2_0_0' (3#1) [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ip/system_translatorV2_0_0/synth/system_translatorV2_0_0.vhd:94]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port CONFIG_CHANNEL[2]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port CONFIG_CHANNEL[1]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port CONFIG_CHANNEL[0]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port CONFIG_VALID
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design translatorV2_v1_0_S00_AXI has unconnected port CONFIG_READY
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 330.504 ; gain = 120.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 330.504 ; gain = 120.648
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.033 . Memory (MB): peak = 626.926 ; gain = 0.164
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "CONFIG_ENABLE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 9     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   8 Input     32 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module translatorV2_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 9     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   8 Input     32 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port S00_CONFIG_CHANNEL[2]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port S00_CONFIG_CHANNEL[1]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port S00_CONFIG_CHANNEL[0]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port S00_CONFIG_VALID
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port S00_CONFIG_READY
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design system_translatorV2_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/translatorV2_v1_0_S00_AXI_inst/CONFIG_ENABLE_reg__0 )
+INFO: [Synth 8-3886] merging instance 'U0/translatorV2_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/translatorV2_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/translatorV2_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/translatorV2_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/translatorV2_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/translatorV2_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/CONFIG_ENABLE_reg__0) is unused and will be removed from module system_translatorV2_0_0.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/translatorV2_v1_0_S00_AXI_inst/stateChart_reg_P )
+INFO: [Synth 8-3332] Sequential element (U0/translatorV2_v1_0_S00_AXI_inst/stateChart_reg_P) is unused and will be removed from module system_translatorV2_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S00_CONFIG_ENABLE with 1st driver pin 'U0/translatorV2_v1_0_S00_AXI_inst/CONFIG_ENABLE_reg/Q' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:467]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S00_CONFIG_ENABLE with 2nd driver pin 'U0/translatorV2_v1_0_S00_AXI_inst/CONFIG_ENABLE_reg__1/Q' [c:/EAAES/asignments/LineArray/LineArray.srcs/sources_1/bd/system/ipshared/866e/hdl/translatorV2_v1_0_S00_AXI.vhd:313]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     1|
+|2     |LUT2  |     2|
+|3     |LUT3  |     6|
+|4     |LUT4  |    10|
+|5     |LUT5  |    35|
+|6     |LUT6  |    66|
+|7     |MUXF7 |    32|
+|8     |FDCE  |     2|
+|9     |FDRE  |   301|
+|10    |FDSE  |     3|
+|11    |LDC   |     1|
++------+------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+--------------------------+------+
+|      |Instance                           |Module                    |Cells |
++------+-----------------------------------+--------------------------+------+
+|1     |top                                |                          |   459|
+|2     |  U0                               |translatorV2_v1_0         |   459|
+|3     |    translatorV2_v1_0_S00_AXI_inst |translatorV2_v1_0_S00_AXI |   459|
++------+-----------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 626.926 ; gain = 113.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 626.926 ; gain = 417.070
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDC => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 24 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 626.926 ; gain = 410.082
+INFO: [Common 17-1381] The checkpoint 'C:/EAAES/asignments/LineArray/LineArray.runs/system_translatorV2_0_0_synth_1/system_translatorV2_0_0.dcp' has been generated.

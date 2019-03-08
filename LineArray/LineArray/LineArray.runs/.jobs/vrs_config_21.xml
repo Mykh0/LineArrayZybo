@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="system_PWM_GENERATOR_0_2_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_2_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_1_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_8_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_8_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_7_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_7_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_6_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_5_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_5_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_4_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_4_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_PWM_GENERATOR_3_0_synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/system_PWM_GENERATOR_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="system_PWM_GENERATOR_0_2_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_2_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_1_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_8_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_7_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_6_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_5_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_4_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_3_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/EAAES/asignments/LineArray/LineArray.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_0_2_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_2_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_1_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_8_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_7_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_6_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_5_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_4_0_synth_1"/>
+		<Parent Id="system_PWM_GENERATOR_3_0_synth_1"/>
+	</Run>
+</Runs>
+

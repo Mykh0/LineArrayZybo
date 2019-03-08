@@ -1,0 +1,396 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Fri Jan 25 16:24:16 2019
+| Host         : Mykho_Laptop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_SpeakerGain_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_SpeakerGain_0_1 (xilinx.com:user:SpeakerGain:1.1) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 15:49:51 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 15:40:30 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 15:25:22 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 13) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 15:14:19 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 14:58:39 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 14:54:12 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 14:48:23 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 14:27:36 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 14:05:59 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 13:27:51 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Jan 24 12:30:48 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Jan 23 18:30:30 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Jan 23 18:27:06 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Jan 23 18:19:08 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Wed Jan 23 18:10:50 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_translatorV2_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_translatorV2_0_0 (xilinx.com:user:translatorV2:1.0) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'system_translatorV2_0_0'.
+
+
+-Upgrade has added interface 's00_axi_aclk' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 's00_axi_aresetn' (xilinx.com:signal:reset:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_translatorV2_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'S00_CONFIG_CHANNEL'
+
+-Upgrade has added port 'S00_CONFIG_DATA0'
+
+-Upgrade has added port 'S00_CONFIG_DATA1'
+
+-Upgrade has added port 'S00_CONFIG_DATA2'
+
+-Upgrade has added port 'S00_CONFIG_DATA3'
+
+-Upgrade has added port 'S00_CONFIG_DATA4'
+
+-Upgrade has added port 'S00_CONFIG_DATA5'
+
+-Upgrade has added port 'S00_CONFIG_DATA6'
+
+-Upgrade has added port 'S00_CONFIG_DATA7'
+
+-Upgrade has added port 'S00_CONFIG_ENABLE'
+
+-Upgrade has added port 'S00_CONFIG_READY'
+
+-Upgrade has added port 'S00_CONFIG_VALID'
+
+
+
+
+
+
+
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Tue Jan 22 17:01:04 2019
+| Host         : Acer running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Axi_translator_delay_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Axi_translator_delay_0_0 (xilinx.com:user:Axi_translator_delay:1.0) from (Rev. 2) to (Rev. 3)
+
